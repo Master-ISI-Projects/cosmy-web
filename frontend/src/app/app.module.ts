@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ConversationComponent } from './conversation/conversation.component';
+import { ChatterModule } from './modules/chatter/chatter.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ConversationComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChatterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
