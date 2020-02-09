@@ -154,9 +154,24 @@
               "projects/admin/src/assets"
             ],
             "styles": [
-              "projects/admin/src/styles.css"
+              "projects/admin/src/styles.css",
+              "projects/admin/src/assets/font/iconsmind-s/css/iconsminds.css",
+              "projects/admin/src/assets/font/simple-line-icons/css/simple-line-icons.css",
+              "projects/admin/src/assets/css/vendor/bootstrap.min.css",
+              "projects/admin/src/assets/css/vendor/bootstrap.rtl.only.min.css",
+              "projects/admin/src/assets/css/vendor/component-custom-switch.min.css",
+              "projects/admin/src/assets/css/vendor/perfect-scrollbar.css",
+              "projects/admin/src/assets/css/main.css",
+              "projects/admin/src/assets/css/dore.light.blue.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "projects/admin/src/assets/js/vendor/jquery-3.3.1.min.js",
+              "projects/admin/src/assets/js/vendor/bootstrap.bundle.min.js",
+              "projects/admin/src/assets/js/vendor/perfect-scrollbar.min.js",
+              "projects/admin/src/assets/js/vendor/mousetrap.min.js",
+              "projects/admin/src/assets/js/dore.script.js",
+              "projects/admin/src/assets/js/scripts.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -251,5 +266,5 @@
         }
       }
     }},
-  "defaultProject": "website"
+  "defaultProject": "admin"
 }
