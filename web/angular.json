@@ -29,6 +29,8 @@
               "projects/website/src/assets/css/iconfont.min.css",
               "projects/website/src/assets/css/plugins.css",
               "projects/website/src/assets/css/helper.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss",
               "projects/website/src/assets/css/style.css"
             ],
             "scripts": [
@@ -36,6 +38,7 @@
               "projects/website/src/assets/js/vendor/jquery-1.12.4.min.js",
               "projects/website/src/assets/js/popper.min.js",
               "projects/website/src/assets/js/bootstrap.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
               "projects/website/src/assets/js/plugins.js",
               "projects/website/src/assets/js/main.js"
             ]
@@ -266,5 +269,5 @@
         }
       }
     }},
-  "defaultProject": "admin"
+  "defaultProject": "website"
 }

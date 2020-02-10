@@ -7,6 +7,8 @@ import { NavbarComponent } from './views/components/navbar/navbar.component';
 import { FooterComponent } from './views/components/footer/footer.component';
 import { TopNavbarComponent } from './views/components/top-navbar/top-navbar.component';
 import { BlankComponent } from './views/pages/blank/blank.component';
+import { HomeComponent } from './views/pages/home/home.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { BlankComponent } from './views/pages/blank/blank.component';
     TopNavbarComponent,
     NavbarComponent,
     FooterComponent,
-    BlankComponent
+    BlankComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
