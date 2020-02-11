@@ -1,0 +1,202 @@
+{
+
+ "products": [
+    {
+        "productId": "Prd_7676786",
+        "productName": "WHITE SHAVE BRUK 1",
+        "productCategory": "Crème",
+        "productPrice": 140.11,
+        "productWeight": 51,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION 1",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-1.jpg",
+        "productQuatity": 10,
+        "productVideoUrl": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 40,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7671345",
+        "productName": "WHITE SHAVE BRUK 3" ,
+        "productCategory": "Crème",
+        "productPrice": 777.11,
+        "productWeight": 55,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-2.jpg",
+        "productQuatity": 120,
+        "productVideoUrl": "https://i.pinimg.com/originals/9b/68/4b/9b684bfc5e4bd28ad4283038632bff6d.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 15,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7676786",
+        "productName": "WHITE SHAVE BRUK 2",
+        "productCategory": "Crème",
+        "productPrice": 777.11,
+        "productWeight": 55,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-3.jpg",
+        "productQuatity": 120,
+        "productVideoUrl": "https://i.pinimg.com/originals/c6/39/e2/c639e2ed36e9b26437194c4ac103673b.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 20,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7676786",
+        "productName": "WHITE SHAVE BRUK 1",
+        "productCategory": "Crème",
+        "productPrice": 140.11,
+        "productWeight": 51,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION 1",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-4.jpg",
+        "productQuatity": 10,
+        "productVideoUrl": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 40,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7671345",
+        "productName": "WHITE SHAVE BRUK 3" ,
+        "productCategory": "Crème",
+        "productPrice": 777.11,
+        "productWeight": 55,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-5.jpg",
+        "productQuatity": 120,
+        "productVideoUrl": "https://i.pinimg.com/originals/9b/68/4b/9b684bfc5e4bd28ad4283038632bff6d.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 15,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7676786",
+        "productName": "WHITE SHAVE BRUK 2",
+        "productCategory": "Crème",
+        "productPrice": 777.11,
+        "productWeight": 55,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-6.jpg",
+        "productQuatity": 120,
+        "productVideoUrl": "https://i.pinimg.com/originals/c6/39/e2/c639e2ed36e9b26437194c4ac103673b.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 20,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7676786",
+        "productName": "WHITE SHAVE BRUK 1",
+        "productCategory": "Crème",
+        "productPrice": 140.11,
+        "productWeight": 51,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION 1",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-7.jpg",
+        "productQuatity": 10,
+        "productVideoUrl": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 40,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7671345",
+        "productName": "WHITE SHAVE BRUK 3" ,
+        "productCategory": "Crème",
+        "productPrice": 777.11,
+        "productWeight": 55,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-8.jpg",
+        "productQuatity": 120,
+        "productVideoUrl": "https://i.pinimg.com/originals/9b/68/4b/9b684bfc5e4bd28ad4283038632bff6d.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 15,
+        "favourite": "TRUE",
+        "productSeller": 3
+      },
+      {
+        "productId": "Prd_7676786",
+        "productName": "WHITE SHAVE BRUK 2",
+        "productCategory": "Crème",
+        "productPrice": 777.11,
+        "productWeight": 55,
+        "productDescription": "WHITE SHAVE BRUK DESCRIPTION",
+        "productProtocoleApplication" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+        "productImageUrl": "assets/images/product/product-9.jpg",
+        "productQuatity": 120,
+        "productVideoUrl": "https://i.pinimg.com/originals/c6/39/e2/c639e2ed36e9b26437194c4ac103673b.png",
+        "productPromotion" : "TRUE",
+        "productPourcentagePromotion" : 20,
+        "favourite": "TRUE",
+        "productSeller": 3
+      }
+     
+ ],
+ "simillarProducts": [
+    {
+        "id": "JP630963",
+        "text": "Everfresh Flowers",
+		    "price": 245,
+        "image": [
+          "assets/images/2.jpg"
+        ]
+      },  
+      {
+        "id": "JP630963",
+        "text": "Festive Deer",
+	    	"price": 146,
+        "image": [
+          "assets/images/3.jpg"
+        ]
+      },
+      {
+        "id": "JP630963",
+        "text": "Morning Greens",
+		    "price": 125,
+        "image": [
+          "assets/images/4.jpg"
+        ]
+      }
+ ],
+ "cart": [
+    {
+        "id": 306189,
+        "text": "Everfresh Flowers",
+		    "price": 1299,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/1_b0a46754-a3cf-4f56-901e-328a4dbce265_300x.jpg?v=1547817485"
+        ]
+      },
+      {
+        "id": 245890,
+        "text": "Festive Deer",
+		    "price": 2899,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/g_0358_300x.jpg?v=1568887058"
+        ]
+      },
+      {
+        "id": 100363,
+        "text": "Morning Greens",
+		"price": 1599,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/G_2081_300x.jpg?v=1560834388"
+        ]
+      }
+ ]
+}
