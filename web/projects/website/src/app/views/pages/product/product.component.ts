@@ -13,7 +13,7 @@ export class ProductComponent implements OnInit {
 
   products: Product[] = [];
   categories: Category[] = [];
-  categoryFilter: string;
+  categoryFilter: string = '';
   
   constructor(private service: ProductService) { }
 

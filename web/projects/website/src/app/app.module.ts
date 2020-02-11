@@ -12,6 +12,7 @@ import { ProductComponent } from './views/pages/product/product.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ChatterModule } from './modules/chatter/chatter.module';
+import { ProductDetailComponent } from './views/pages/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChatterModule } from './modules/chatter/chatter.module';
     FooterComponent,
     BlankComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     HttpClientModule,
