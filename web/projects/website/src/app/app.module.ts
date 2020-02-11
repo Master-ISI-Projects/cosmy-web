@@ -11,6 +11,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductComponent } from './views/pages/product/product.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ChatterModule } from './modules/chatter/chatter.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ChatterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

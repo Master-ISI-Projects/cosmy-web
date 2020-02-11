@@ -1,16 +1,12 @@
-export class Product {
-    productId: string;
-    productName: string;
-    productCategory: string;
-    productPrice: number;
-    productWeight: number;
-    productDescription: string;
-    productProtocoleApplication : string;
-    productImageUrl: string;
-    productQuatity: number;
-    productVideoUrl: string;
-    productPromotion : boolean;
-    productPourcentagePromotion : number;
-    favourite: boolean;
-    productSeller: string;
-  }
+export interface Product {
+  id?: number;
+  title?: string;
+  image?: string;
+  price?: string;
+  weight?: string;
+  description?: string;
+  applicationProtocol?: string;
+  video?: string;
+  inSolde?: boolean;  
+  soldeRate?: number;
+}
