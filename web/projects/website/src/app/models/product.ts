@@ -1,6 +1,7 @@
 export interface Product {
   id?: number;
   title?: string;
+  category: string;
   image?: string;
   price?: string;
   weight?: string;
@@ -8,7 +9,8 @@ export interface Product {
   applicationProtocol?: string;
   video?: string;
   inSolde?: boolean;  
-  pourcentagePromotion : number,
-  favourite : boolean,
-  productSeller: string
+  pourcentagePromotion? : number,
+  favourite? : boolean,
+  productSeller?: string,
+  createdAt : string,
 }

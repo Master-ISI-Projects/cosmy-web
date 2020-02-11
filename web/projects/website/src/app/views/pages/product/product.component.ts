@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../services/product.service';
 import { Product} from '../../../models/product';
+import { Category} from '../../../models/category';
 
 
 @Component({
@@ -11,17 +12,31 @@ import { Product} from '../../../models/product';
 export class ProductComponent implements OnInit {
 
   products: Product[] = [];
-
+  categories: Category[] = [];
+  categoryFilter: string;
+  
   constructor(private service: ProductService) { }
 
   ngOnInit() {
-    this.fetchElements();
+    this.getAllProducts();
+    this.getAllCategories();
   }
 
-  fetchElements() {
-    this.service.getAll().subscribe(response => {
+  getAllProducts() {
+    this.service.getAll(this.categoryFilter).subscribe(response => {
       this.products = response;
     });
+  }
+
+  getAllCategories() {
+    this.service.getCategory().subscribe(response => {
+      this.categories = response;
+    });
+  }
+
+  applyFilter(category: string) {
+    this.categoryFilter = category;
+    this.getAllProducts();
   }
 
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Product } from '../models/product';
+import { Category } from '../models/category';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -8,12 +9,17 @@ import { environment } from '../../environments/environment';
 })
 export class ProductService {
 
-  constructor(public client:HttpClient) { }
+  constructor(public client: HttpClient) { }
 
-  private URL: string = " http://localhost:3000" + "/products";
+  private URL: string = environment.baseUrl;
   
-  getAll() {
-    return this.client.get<Product[]>(this.URL);
+  getAll(category: string = '') {
+    let filter = '?category=' + category + '&_sort=createdAt&_order=desc';
+    return this.client.get<Product[]>(this.URL +  "/products" + filter);
+  }
+
+  getCategory() {
+    return this.client.get<Category[]>(this.URL +  "/category");
   }
 
 
