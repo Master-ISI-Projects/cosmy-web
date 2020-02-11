@@ -19,11 +19,12 @@ export class ProductService {
     if(category) {
       filter += '&category=' + category;
     }
+    
     return this.http.get<Product[]>(this.URL +  "/products" + filter);
   }
 
-  getCategory() {
-    return this.http.get<Category[]>(this.URL +  "/category");
+  getAllCategories() {
+    return this.http.get<Category[]>(this.URL +  "/categories");
   }
 
   getProductById(id: number): Observable<Product> {

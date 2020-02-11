@@ -29,12 +29,13 @@ export class ProductComponent implements OnInit {
   }
 
   getAllCategories() {
-    this.service.getCategory().subscribe(response => {
+    this.service.getAllCategories().subscribe(response => {
       this.categories = response;
     });
   }
 
   applyFilter(category: string) {
+    console.log(category)
     this.categoryFilter = category;
     this.getAllProducts();
   }

@@ -1,8 +1,9 @@
 var faker = require('faker');
 
 var database = {members: [], products: [], posts: [], categories: []};
+var categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
 
-for (var i = 1; i<= 20; i++) {
+for (var i = 1; i< 20; i++) {
   database.members.push({
     id: i,
     firstName: faker.name.firstName(),
@@ -18,8 +19,9 @@ for (var i = 1; i<= 20; i++) {
   database.products.push({
     id: i,
     title: faker.commerce.productName(),
-    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 3) + 1) + '.png',
+    image: 'assets/images/product/product-' + i + '.jpg',
     price: faker.commerce.price(),
+    category: categories[(Math.floor(Math.random() * 4) + 1)],
     weight: faker.random.number(),
     description: faker.lorem.text(),
     applicationProtocol: faker.lorem.text(),
@@ -39,11 +41,13 @@ for (var i = 1; i<= 20; i++) {
     author: faker.name.firstName() + ' ' + faker.name.lastName(),
     createdAt: faker.date.past(i)
   });
+}
 
+for (let index = 0; index < categories.length; index++) {
   database.categories.push({
     id: i,
-    title: faker.lorem.words(),
-    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 3) + 1) + '.png',
+    title: categories[index],
+    image: 'assets/images/categories/cate-' + (Math.floor(Math.random() * 3) + 1) + '.png',
   });
 }
 
