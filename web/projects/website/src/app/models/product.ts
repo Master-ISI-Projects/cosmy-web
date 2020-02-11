@@ -8,5 +8,7 @@ export interface Product {
   applicationProtocol?: string;
   video?: string;
   inSolde?: boolean;  
-  soldeRate?: number;
+  pourcentagePromotion : number,
+  favourite : boolean,
+  productSeller: string
 }
