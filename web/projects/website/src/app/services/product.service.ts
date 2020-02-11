@@ -10,7 +10,7 @@ export class ProductService {
 
   constructor(public client:HttpClient) { }
 
-  private URL: string = " http://localhost:3000" + "/products";
+  private URL: string = " http://localhost:3000" + "/products?_sort=createdAt=desc'";
   
   getAll() {
     return this.client.get<Product[]>(this.URL);
