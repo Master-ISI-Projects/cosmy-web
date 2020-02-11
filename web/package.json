@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "generate": "node ./projects/server/generate.js > ./projects/server/database.json",
+    "server": "json-server --watch ./projects/server/database.json"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +21,8 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "faker": "^4.1.0",
+    "ng-chat": "^2.0.5",
     "ngx-slick-carousel": "^0.4.7",
     "rxjs": "~6.4.0",
     "slick-carousel": "^1.8.1",

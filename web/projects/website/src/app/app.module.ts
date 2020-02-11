@@ -9,6 +9,7 @@ import { TopNavbarComponent } from './views/components/top-navbar/top-navbar.com
 import { BlankComponent } from './views/pages/blank/blank.component';
 import { HomeComponent } from './views/pages/home/home.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ChatterModule } from './modules/chatter/chatter.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ChatterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
