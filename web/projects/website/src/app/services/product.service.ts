@@ -9,12 +9,13 @@ import { environment } from '../../environments/environment';
 })
 export class ProductService {
 
-  constructor(public client:HttpClient) { }
+  constructor(public client: HttpClient) { }
 
   private URL: string = environment.baseUrl;
   
-  getAll() {
-    return this.client.get<Product[]>(this.URL +  "/products?_sort=createdAt&_order=desc");
+  getAll(category: string = '') {
+    let filter = '?category=' + category + '&_sort=createdAt&_order=desc';
+    return this.client.get<Product[]>(this.URL +  "/products" + filter);
   }
 
   getCategory() {
