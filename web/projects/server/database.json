@@ -12,7 +12,7 @@
 			"image": "assets/images/product/product-1.jpg",
 			"productQuatity": 10,
 			"video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-			"inSolde" : true,
+			"inSolde" : false,
 			"pourcentagePromotion" : 40,
 			"favourite": true,
 			"productSeller": 3,
@@ -46,7 +46,7 @@
 			"image": "assets/images/product/product-2.jpg",
 			"productQuatity": 10,
 			"video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-			"inSolde" : true,
+			"inSolde" : false,
 			"pourcentagePromotion" : 22,
 			"favourite": false,
 			"productSeller": 3,
@@ -63,7 +63,7 @@
 			"image": "assets/images/product/product-4.jpg",
 			"productQuatity": 10,
 			"video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-			"inSolde" : true,
+			"inSolde" : false,
 			"pourcentagePromotion" : 15,
 			"favourite": false,
 			"productSeller": 3,
@@ -80,7 +80,7 @@
 			"image": "assets/images/product/product-5.jpg",
 			"productQuatity": 10,
 			"video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-			"inSolde" : true,
+			"inSolde" : false,
 			"pourcentagePromotion" : 40,
 			"favourite": false,
 			"productSeller": 3,
@@ -88,7 +88,7 @@
 		  },
 		  {
 			"id": 6,
-			"title": "WHITE SHAVE BRUK 2",
+			"title": "WHITE SHAVE BRUK 6",
 			"productCategory": "Crème",
 			"prices": 55.11,
 			"weight": 51,
@@ -114,7 +114,7 @@
 			"image": "assets/images/product/product-7.jpg",
 			"productQuatity": 10,
 			"video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-			"inSolde" : true,
+			"inSolde" : false,
 			"pourcentagePromotion" : 20,
 			"favourite": false,
 			"productSeller": 3,
@@ -124,7 +124,7 @@
 			"id": 8,
 			"title": "WHITE SHAVE BRUK 8",
 			"productCategory": "Crème",
-			"prices": 740.11,
+			"prices": 222,
 			"weight": 51,
 			"description": "WHITE SHAVE BRUK DESCRIPTION 8",
 			"applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
@@ -135,7 +135,43 @@
 			"pourcentagePromotion" : 14,
 			"favourite": false,
 			"productSeller": 3,
-			"createdAt" : "2020-02-08"
+			"createdAt" : "2020-02-22"
 		  }
 		 
-	 ]}
+	 ],
+
+	"category": [
+		  {
+			"id": 1,
+			"title": "Crème",
+			"img": "assets/images/product/product-8.jpg"
+		  },
+		  {
+			"id": 2,
+			"title": "Crème 2",
+			"img": "assets/images/product/product-8.jpg"
+		  },
+		  {
+			"id": 3,
+			"title": "Crème 3",
+			"img": "assets/images/product/product-8.jpg"
+		  },
+		  {
+			"id": 4,
+			"title": "Crème 4",
+			"img": "assets/images/product/product-8.jpg"
+		  },
+		  {
+			"id": 5,
+			"title": "Crème 5",
+			"img": "assets/images/product/product-8.jpg"
+		  },
+		  {
+			"id": 7,
+			"title": "Crème 6",
+			"img": "assets/images/product/product-8.jpg"
+		  }
+		 
+	 ]
+
+}
