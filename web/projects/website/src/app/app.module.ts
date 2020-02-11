@@ -12,6 +12,9 @@ import { ProductComponent } from './views/pages/product/product.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ChatterModule } from './modules/chatter/chatter.module';
+import { BlogComponent } from './views/pages/blog/blog.component';
+import { PostService } from './services/post.service';
+import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,18 +24,21 @@ import { ChatterModule } from './modules/chatter/chatter.module';
     FooterComponent,
     BlankComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    BlogComponent,
+    BlogDetailComponent
   ],
   imports: [
     HttpClientModule,
     HttpModule,
-    
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
     ChatterModule
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
