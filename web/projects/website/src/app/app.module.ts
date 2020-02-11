@@ -13,6 +13,9 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ChatterModule } from './modules/chatter/chatter.module';
 import { ProductDetailComponent } from './views/pages/product-detail/product-detail.component';
+import { BlogComponent } from './views/pages/blog/blog.component';
+import { PostService } from './services/post.service';
+import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,18 +26,21 @@ import { ProductDetailComponent } from './views/pages/product-detail/product-det
     BlankComponent,
     HomeComponent,
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    BlogComponent,
+    BlogDetailComponent
   ],
   imports: [
     HttpClientModule,
     HttpModule,
-    
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
     ChatterModule
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

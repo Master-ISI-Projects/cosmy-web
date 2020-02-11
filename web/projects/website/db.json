@@ -1,186 +1,131 @@
-{
-
- "products": [
+"products": [
+  {
+    "id": 1,
+    "title": "WHITE SHAVE BRUK 1",
+    "productCategory": "Crème",
+    "prices": 140.11,
+    "weight": 51,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 1",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-1.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 40,
+    "favourite": true,
+    "productSeller": 3
+    },
     {
-        "id": 1,
-        "title": "WHITE SHAVE BRUK 1",
-        "productCategory": "Crème",
-        "prices": 140.11,
-        "weight": 51,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 1",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-1.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 40,
-        "favourite": true,
-        "productSeller": 3
-      },
-      {
-        "id": 2,
-        "title": "WHITE SHAVE BRUK 2",
-        "productCategory": "Crème",
-        "prices": 140.11,
-        "weight": 51,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 2",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-2.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 40,
-        "favourite": false,
-        "productSeller": 3
-      },
-      {
-        "id": 3,
-        "title": "WHITE SHAVE BRUK 3",
-        "productCategory": "Crème",
-        "prices": 80,
-        "weight": 5,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 2",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-2.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 22,
-        "favourite": false,
-        "productSeller": 3
-      },
-      {
-        "id": 4,
-        "title": "WHITE SHAVE BRUK 4",
-        "productCategory": "Crème",
-        "prices": 200.11,
-        "weight": 51,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 4",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-4.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 15,
-        "favourite": false,
-        "productSeller": 3
-      },
-      {
-        "id": 5,
-        "title": "WHITE SHAVE BRUK 5",
-        "productCategory": "Crème",
-        "prices": 140.11,
-        "weight": 51,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 5",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-5.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 40,
-        "favourite": false,
-        "productSeller": 3
-      },
-      {
-        "id": 6,
-        "title": "WHITE SHAVE BRUK 2",
-        "productCategory": "Crème",
-        "prices": 55.11,
-        "weight": 51,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 6",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-6.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 40,
-        "favourite": false,
-        "productSeller": 3
-      },
-      {
-        "id": 7,
-        "title": "WHITE SHAVE BRUK 7",
-        "productCategory": "Crème",
-        "prices": 540.11,
-        "weight": 5,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 2",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-7.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 20,
-        "favourite": false,
-        "productSeller": 3
-      },
-      {
-        "id": 8,
-        "title": "WHITE SHAVE BRUK 8",
-        "productCategory": "Crème",
-        "prices": 740.11,
-        "weight": 51,
-        "description": "WHITE SHAVE BRUK DESCRIPTION 8",
-        "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
-        "image": "assets/images/product/product-8.jpg",
-        "productQuatity": 10,
-        "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
-        "inSolde" : true,
-        "pourcentagePromotion" : 14,
-        "favourite": false,
-        "productSeller": 3
-      }
-     
- ],
- "simillarProducts": [
+    "id": 2,
+    "title": "WHITE SHAVE BRUK 2",
+    "productCategory": "Crème",
+    "prices": 140.11,
+    "weight": 51,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 2",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-2.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 40,
+    "favourite": false,
+    "productSeller": 3
+    },
     {
-        "id": "JP630963",
-        "text": "Everfresh Flowers",
-		    "price": 245,
-        "image": [
-          "assets/images/2.jpg"
-        ]
-      },  
-      {
-        "id": "JP630963",
-        "text": "Festive Deer",
-	    	"price": 146,
-        "image": [
-          "assets/images/3.jpg"
-        ]
-      },
-      {
-        "id": "JP630963",
-        "text": "Morning Greens",
-		    "price": 125,
-        "image": [
-          "assets/images/4.jpg"
-        ]
-      }
- ],
- "cart": [
+    "id": 3,
+    "title": "WHITE SHAVE BRUK 3",
+    "productCategory": "Crème",
+    "prices": 80,
+    "weight": 5,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 2",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-2.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 22,
+    "favourite": false,
+    "productSeller": 3
+    },
     {
-        "id": 306189,
-        "text": "Everfresh Flowers",
-		    "price": 1299,
-        "image": [
-          "https://cdn.shopify.com/s/files/1/1276/5299/products/1_b0a46754-a3cf-4f56-901e-328a4dbce265_300x.jpg?v=1547817485"
-        ]
-      },
-      {
-        "id": 245890,
-        "text": "Festive Deer",
-		    "price": 2899,
-        "image": [
-          "https://cdn.shopify.com/s/files/1/1276/5299/products/g_0358_300x.jpg?v=1568887058"
-        ]
-      },
-      {
-        "id": 100363,
-        "text": "Morning Greens",
-		"price": 1599,
-        "image": [
-          "https://cdn.shopify.com/s/files/1/1276/5299/products/G_2081_300x.jpg?v=1560834388"
-        ]
-      }
+    "id": 4,
+    "title": "WHITE SHAVE BRUK 4",
+    "productCategory": "Crème",
+    "prices": 200.11,
+    "weight": 51,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 4",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-4.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 15,
+    "favourite": false,
+    "productSeller": 3
+    },
+    {
+    "id": 5,
+    "title": "WHITE SHAVE BRUK 5",
+    "productCategory": "Crème",
+    "prices": 140.11,
+    "weight": 51,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 5",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-5.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 40,
+    "favourite": false,
+    "productSeller": 3
+    },
+    {
+    "id": 6,
+    "title": "WHITE SHAVE BRUK 2",
+    "productCategory": "Crème",
+    "prices": 55.11,
+    "weight": 51,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 6",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-6.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 40,
+    "favourite": false,
+    "productSeller": 3
+    },
+    {
+    "id": 7,
+    "title": "WHITE SHAVE BRUK 7",
+    "productCategory": "Crème",
+    "prices": 540.11,
+    "weight": 5,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 2",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-7.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 20,
+    "favourite": false,
+    "productSeller": 3
+    },
+    {
+    "id": 8,
+    "title": "WHITE SHAVE BRUK 8",
+    "productCategory": "Crème",
+    "prices": 740.11,
+    "weight": 51,
+    "description": "WHITE SHAVE BRUK DESCRIPTION 8",
+    "applicationProtocol" : "La rigueur dans le développement des APs, les spécifications de méthodologie et des langages à utiliser et l'inclusion de détails sur les exigences de conformité sont des atouts très importants dans la première livraison qui devrait connaître le document. Cela concerne aussi les vendeurs de logiciels.",
+    "image": "assets/images/product/product-8.jpg",
+    "productQuatity": 10,
+    "video": "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+    "inSolde" : true,
+    "pourcentagePromotion" : 14,
+    "favourite": false,
+    "productSeller": 3
+    }
+   
  ]
-}
