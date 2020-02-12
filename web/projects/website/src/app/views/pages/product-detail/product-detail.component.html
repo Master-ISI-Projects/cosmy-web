@@ -1,0 +1,147 @@
+<!-- Single Product Section Start -->
+<div class="single-product-section section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-100 pb-lg-80 pb-md-70 pb-sm-30 pb-xs-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Product Details Left -->
+                <div class="product-details-left">
+                    <div class="product-details-images-2 slider-lg-image-1 tabstyle-3 tf-element-carousel" data-slick-options='{
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1,
+                        "infinite": true,
+                        "asNavFor": ".slider-thumbs-1",
+                        "arrows": false,
+                        "prevArrow": {"buttonClass": "slick-btn slick-prev", "iconClass": "fa fa-angle-left" },
+                        "nextArrow": {"buttonClass": "slick-btn slick-next", "iconClass": "fa fa-angle-right" }
+                        }'>
+                        <div class="lg-image">
+                            <img src="{{product.image }}" alt="">
+                            <a href="{{ product.image }}" class="popup-img venobox" data-gall="myGallery"><i class="fa fa-expand"></i></a>
+                        </div>
+   
+                    </div>
+                    <div class="product-details-thumbs-2 mt-0 mt-xs-20 slider-thumbs-1 tabstyle-3 tf-element-carousel" >										
+                        <div class="sm-image"><img src="{{ product.image }}" alt="product image thumb"></div>
+                        <div class="sm-image"><img src="{{ product.image }}" alt="product image thumb"></div>
+                        <div class="sm-image"><img src="{{ product.image }}" alt="product image thumb"></div>
+                        <div class="sm-image"><img src="{{ product.image }}" alt="product image thumb"></div>
+                    </div>
+                </div>
+                <!--Product Details Left -->
+            </div>
+            <div class="col-md-6">
+                <!--Product Details Content Start-->
+                <div class="product-details-content">
+     
+                    <h2> {{ product.title }} </h2>
+                    <div class="single-product-reviews">
+
+                    </div>
+                    <div class="single-product-price">
+                        <span class="price new-price"> {{ product.price }} DH </span>
+                    </div>
+                    <div class="single-product-price">
+                        <span class="price"> {{ product.weight }} ml </span>
+                    </div>
+                    <div class="product-description">
+                        <p>{{ product.description }}</p>
+                    </div>
+                    <div class="single-product-quantity">
+                        <form class="add-quantity" action="#">
+                             <div class="product-quantity">
+                                 <input value="1" type="number">
+                             </div>
+                            <div class="add-to-link">
+                                <button type="button" class="product-add-btn" (click)="addToCart(product)">add to cart</button>
+                            </div>
+                        </form>
+                   </div>
+                    <div class="product-meta">
+                        <span class="posted-in">
+                                Category: 
+                                <a> {{product.category}}</a>,
+                            </span>
+                    </div>
+                </div>
+                <!--Product Details Content End-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Single Product Section End -->
+
+<!--Product Description Review Section Start-->
+<div class="product-description-review-section section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-review-tab">
+                    <!--Review And Description Tab Menu Start-->
+                    <ul class="nav dec-and-review-menu">
+                        <li>
+                        <a class="active" data-toggle="tab" href="#description">Protocole d'application</a>
+                        </li>
+                    </ul>
+                    <!--Review And Description Tab Menu End-->
+                    <!--Review And Description Tab Content Start-->
+                    <div class="tab-content product-review-content-tab" id="myTabContent-4">
+                        <div class="tab-pane fade active show" id="description">
+                            <div class="single-product-description">
+                                <p> {{ product.applicationProtocol }} </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--Review And Description Tab Content End-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Product Description Review Section Start-->
+
+<!--Product section start-->
+<div
+    class="product-section section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-65 pb-lg-45 pb-md-35 pb-sm-25 pb-xs-15">
+    <div class="container">
+
+        <div class="row">
+            <!-- Section Title Start -->
+            <div class="col">
+                <div class="section-title mb-40 mb-xs-20">
+                    <h2>Related Products</h2>
+                </div>
+            </div>
+            <!-- Section Title End -->
+        </div>
+        <div class="row tf-element-carousel" >
+          <div *ngFor="let prod of productsSimilaire  | slice:0:4;" class="col-lg-3" >
+                <!-- Single Product Start -->
+                <div class="single-product mb-30">
+                    <div class="product-img">
+                        <a routerLink="{{ '/product-detail/' + prod.id }}"  (click)="raflichir()">
+                            <img src="{{ prod.image }}" alt="">
+                        </a>
+                        <span *ngIf="prod.inSolde == true" class="descount-sticker">- {{ prod.pourcentagePromotion }} %</span>
+                        <span class="sticker">NEW</span>
+                        <div class="product-action d-flex justify-content-between">
+                            <a class="product-btn" (click)="addToCart(prod)" >Add to Cart</a>
+                            <ul class="d-flex">
+                                <li><a routerLink="{{ '/product-detail/' + prod.id }}" title="Quick View"><i class="fa fa-eye"></i></a></li>
+
+                            </ul>   
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3><a routerLink="{{ '/product-detail/' + prod.id }}" (click)="raflichir()">{{ prod.title }}</a></h3>
+                        <h4 class="price"><span class="new">{{ prod.price }} DH</span></h4>
+                    </div>
+                </div>
+                <!-- Single Product End -->
+          </div>
+           
+
+        </div>
+    </div>
+</div>
+<!--Product section end-->

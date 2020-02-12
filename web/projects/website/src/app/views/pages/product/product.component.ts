@@ -13,13 +13,15 @@ export class ProductComponent implements OnInit {
 
   products: Product[] = [];
   categories: Category[] = [];
-  categoryFilter: string;
+  categoryFilter: string = '';
+  nbrCart :  number
   
   constructor(private service: ProductService) { }
 
   ngOnInit() {
     this.getAllProducts();
     this.getAllCategories();
+
   }
 
   getAllProducts() {
@@ -29,14 +31,20 @@ export class ProductComponent implements OnInit {
   }
 
   getAllCategories() {
-    this.service.getCategory().subscribe(response => {
+    this.service.getAllCategories().subscribe(response => {
       this.categories = response;
     });
   }
 
   applyFilter(category: string) {
+    console.log(category)
     this.categoryFilter = category;
     this.getAllProducts();
   }
+
+
+  addToCart(product: Product) {
+		this.service.addToCart(product);
+	}
 
 }

@@ -12,12 +12,14 @@ import { ProductComponent } from './views/pages/product/product.component';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ChatterModule } from './modules/chatter/chatter.module';
+import { ProductDetailComponent } from './views/pages/product-detail/product-detail.component';
 import { BlogComponent } from './views/pages/blog/blog.component';
 import { PostService } from './services/post.service';
 import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
+import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,12 @@ import { FormsModule } from '@angular/forms';
     BlankComponent,
     HomeComponent,
     ProductComponent,
+    ProductDetailComponent,
     BlogComponent,
    
     BlogDetailComponent,
-    AppComponent
+    AppComponent ,
+    ShoppingCartComponent
   ],
   imports: [
     HttpClientModule,
