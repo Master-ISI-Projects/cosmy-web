@@ -27,4 +27,9 @@ export class OrderService {
   save(order: Order): Observable<Order> {
     return this.http.post<Order>(this.RESOURCE_URL, order);
   }
+
+  getLatestOrders(limit: number = 10): Observable<Order[]> {
+    const filter = '?limit=' + limit;
+    return this.http.get<Order[]>(this.RESOURCE_URL + filter);
+  }
 }

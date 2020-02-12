@@ -29,8 +29,8 @@ import { ShowProductsComponent } from './views/pages/products/show-products/show
 import { IndexPostsComponent } from './views/pages/posts/index-posts/index-posts.component';
 import { CreatePostsComponent } from './views/pages/posts/create-posts/create-posts.component';
 import { ShowPostsComponent } from './views/pages/posts/show-posts/show-posts.component';
-import { IndexOrderComponent } from './views/orders/index-order/index-order.component';
-import { ShowOrderComponent } from './views/orders/show-order/show-order.component';
+import { IndexOrderComponent } from './views/pages/orders/index-order/index-order.component';
+import { ShowOrderComponent } from './views/pages/orders/show-order/show-order.component';
 import {OrderService} from './services/order.service';
 
 @NgModule({

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import {Order} from '../../../models/order';
+import {OrderService} from '../../../services/order.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +10,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class DashboardComponent implements OnInit {
 
+  latestOrders: Order[] = [];
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -32,11 +35,22 @@ export class DashboardComponent implements OnInit {
       }
     },
     nav: true
-  }
+  };
 
-  constructor() { }
+  constructor(
+    private orderService: OrderService
+  ) { }
 
   ngOnInit() {
+    this.loadLatestOrders();
+  }
+
+  loadLatestOrders() {
+    this.orderService.findAll()
+      .subscribe(response => {
+        console.log(response);
+        this.latestOrders = response;
+      });
   }
 
 }
