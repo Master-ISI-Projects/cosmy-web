@@ -16,6 +16,8 @@ import { ProductDetailComponent } from './views/pages/product-detail/product-det
 import { BlogComponent } from './views/pages/blog/blog.component';
 import { PostService } from './services/post.service';
 import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart.component';
 
 @NgModule({
@@ -30,6 +32,7 @@ import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart
     ProductDetailComponent,
     BlogComponent,
     BlogDetailComponent,
+    AppComponent ,
     ShoppingCartComponent
   ],
   imports: [
@@ -38,7 +41,9 @@ import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
-    ChatterModule
+    ReactiveFormsModule,
+    ChatterModule,
+    FormsModule
   ],
   providers: [
     PostService

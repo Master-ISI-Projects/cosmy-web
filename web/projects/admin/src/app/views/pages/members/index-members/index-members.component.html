@@ -1,0 +1,41 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h1>Members</h1>
+        <div class="top-right-button-container">
+          <button routerLink="/members/create" type="button" class="btn btn-outline-primary btn-lg top-right-button mr-1">Ajouter Member</button>
+        </div>
+        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb pt-0">
+            <li class="breadcrumb-item">
+              <a href="#">Tableau de board</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Members</li>
+          </ol>
+        </nav>
+        <div class="separator mb-5"></div>
+        <div class="row">
+          <div *ngFor="let member of members" class="col-12 col-md-6 col-lg-4">
+            <div class="card d-flex flex-row mb-4">
+              <a routerLink="{{ '/members/show/' + member.id }}" class="d-flex">
+                <img alt="Profile" src="assets/img/default-user-picture.png" class="img-thumbnail border-0 rounded-circle m-4 list-thumbnail align-self-center">
+              </a>
+              <div class="d-flex flex-grow-1 min-width-zero">
+                <div class="card-body pl-0 align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero">
+                  <div class="min-width-zero">
+                    <a routerLink="{{ '/members/show/' + member.id }}">
+                      <p class="list-item-heading mb-1 truncate">{{ member.firstName + ' ' + member.lastName }}</p>
+                    </a>
+                    <p class="mb-3 text-muted text-small">{{ member.phoneNumber }}</p>
+                    <button routerLink="{{ '/members/show/' + member.id }}" type="button" class="btn btn-xs btn-outline-primary">View</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

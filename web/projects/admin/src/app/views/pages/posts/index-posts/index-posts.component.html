@@ -1,0 +1,40 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mb-5">
+        <h1>Articles</h1>
+        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb pt-0">
+            <li class="breadcrumb-item">
+              <a href="#">Tableau de board</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Articles</li>
+          </ol>
+        </nav>
+        <div class="separator mb-5"></div>
+        <div class="row">
+          <div *ngFor="let post of posts" class="col-12 col-lg-6 mb-5">
+            <div class="card flex-row listing-card-container">
+              <div class="w-40 position-relative">
+                <a routerLink="{{ '/posts/show/' + post.id }}">
+                  <img class="card-img-left" src="{{ post.image }}" alt="Card image cap">
+                </a>
+              </div>
+              <div class="w-60 d-flex align-items-center">
+                <div class="card-body">
+                  <a routerLink="{{ '/posts/show/' + post.id }}">
+                    <h5 class="mb-3 listing-heading ellipsis">{{ post.title }}</h5>
+                  </a>
+                  <p class="listing-desc text-muted ellipsis mb-3">{{ post.content | slice: 0:30 }}</p>
+                  <footer>
+                    <p class="text-muted text-small mb-0 font-weight-light">{{ post.createdAt }}</p>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

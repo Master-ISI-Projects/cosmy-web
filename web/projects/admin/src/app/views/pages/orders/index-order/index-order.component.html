@@ -1,0 +1,81 @@
+<main>
+  <!-- Start listing of data -->
+  <div class="container-fluid">
+    <div class="row app-row">
+      <div class="col-12">
+        <div class="mb-2">
+          <h1>Commandes</h1>
+          <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+            <ol class="breadcrumb pt-0">
+              <li class="breadcrumb-item">
+                <a routerLink="/dashbaord">Tableau de board</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Articles</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="separator mb-5"></div>
+        <div class="list disable-text-selection" data-check-all="checkAll">
+          <div *ngFor="let order of orders" class="card d-flex flex-row mb-3">
+            <div class="pl-2 d-flex flex-grow-1 min-width-zero">
+              <div class="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
+                <a routerLink="{{ 'orders/show/' + order.id }}" class="w-15 w-sm-100">
+                  <p class="list-item-heading mb-1 truncate">{{ order.id }}</p>
+                </a>
+                <p class="mb-1 text-small text-muted text-center w-20 w-sm-100">
+                  {{ order.customer }}
+                </p>
+                <p class="mb-1 text-small text-muted text-center w-20 w-sm-100">
+                  <span class="badge badge-primary">{{ order.status }}</span>
+                </p>
+                <div class="text-center w-30 w-sm-100">
+                  {{ order.createdAt }}
+                </div>
+                <div class="btn-group mb-1">
+                  <button class="btn btn-xs btn-danger dropdown-toggle btn-toggle-without-icon" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="simple-icon-settings"></i>
+                  </button>
+                  <div class="dropdown-menu" x-placement="bottom-start">
+                    <a class="dropdown-item" routerLink="{{ '/orders/show/' + order.id }}">Détails</a>
+                    <a class="dropdown-item" href="#">Supprimer</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End listing of data -->
+  <!-- Start filter menu -->
+  <div class="app-menu">
+    <div class="p-4 h-100">
+      <div class="scroll">
+        <form action="" method="get">
+          <h5 class="mb-3 mt-3">Filtrer</h5>
+          <div class="separator mb-4"></div>
+          <div class="form-group">
+            <label class="text-muted text-small">Client</label>
+            <input type="text" name="full_name" class="form-control" placeholder="Nom du client..." value="">
+          </div>
+
+          <div class="form-group">
+            <label class="text-muted text-small" for="status">Statut</label>
+            <select class="form-control" name="status" id="status">
+              <option value="En Attent">En Attent</option>
+              <option value="Confirmé">Confirmé</option>
+              <option value="Annulé">Annulé</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary btn-block mt-5">Filter</button>
+        </form>
+      </div>
+    </div>
+    <a class="app-menu-button d-inline-block d-xl-none" href="#">
+      <i class="simple-icon-options"></i>
+    </a>
+  </div>
+  <!-- End filter menu -->
+</main>

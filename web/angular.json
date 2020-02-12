@@ -164,6 +164,8 @@
               "projects/admin/src/assets/css/vendor/bootstrap.rtl.only.min.css",
               "projects/admin/src/assets/css/vendor/component-custom-switch.min.css",
               "projects/admin/src/assets/css/vendor/perfect-scrollbar.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "projects/admin/src/assets/css/main.css",
               "projects/admin/src/assets/css/dore.light.blue.min.css"
             ],

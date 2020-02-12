@@ -1,0 +1,138 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h1>Nouveau membre</h1>
+        <div class="top-right-button-container mb-4">
+          <button routerLink="/members" type="button" class="btn btn-primary btn-lg top-right-button link-type">Liste des membres</button>
+        </div>
+        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb pt-0">
+            <li class="breadcrumb-item">
+              <a routerLink="/dashbaord">Tableau de board</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a routerLink="/members">Members</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Nouveau membre</li>
+          </ol>
+        </nav>
+        <div class="separator mb-5"></div>
+      </div>
+    </div>
+    <form method="post" (ngSubmit)="saveMember()">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h5>Informations personnel</h5>
+              <div class="separator mb-4"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="first_name">Nom</label>
+                    <input type="text"
+                           [(ngModel)]="newMember.firstName"
+                           class="form-control"
+                           name="firstName"
+                           id="first_name"
+                           placeholder="Nom">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="last_name">Prénom</label>
+                    <input type="text"
+                           [(ngModel)]="newMember.lastName"
+                           class="form-control"
+                           name="lastName"
+                           id="last_name"
+                           placeholder="Prénom">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label for="phone_number">N° Tél</label>
+                    <input type="tel"
+                           [(ngModel)]="newMember.phoneNumber"
+                           class="form-control"
+                           name="phoneNumber"
+                           id="phone_number"
+                           placeholder="N° Tél">
+                  </div>
+                </div>
+              </div>
+              <h5 class="mt-4">Informations du salone</h5>
+              <div class="separator mb-4"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="siret">SIRET</label>
+                    <input type="text"
+                           [(ngModel)]="newMember.siret"
+                           class="form-control"
+                           name="siret"
+                           id="siret"
+                           placeholder="SIRET">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="posts_count">Nombre de poste</label>
+                    <input type="number"
+                           [(ngModel)]="newMember.postsCount"
+                           class="form-control"
+                           name="postsCount"
+                           id="posts_count"
+                           placeholder="Nombre de poste">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="employees_count">Nombre salarié</label>
+                    <input type="number"
+                           [(ngModel)]="newMember.employeesCount"
+                           class="form-control"
+                           name="employeesCount"
+                           id="employees_count"
+                           placeholder="Nombre salarié">
+                  </div>
+                </div>
+              </div>
+              <h5 class="mt-4">Accès au plateforme</h5>
+              <div class="separator mb-4"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email"
+                           [(ngModel)]="newMember.email"
+                           class="form-control"
+                           name="email"
+                           id="email"
+                           placeholder="E-mail">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password"
+                           [(ngModel)]="newMember.password"
+                           class="form-control"
+                           name="password"
+                           id="password"
+                           placeholder="Mot de passe">
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4"></div>
+              <button type="submit" class="float-right btn btn-primary mb-0">Enregistrer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>

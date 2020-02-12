@@ -1,0 +1,81 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mb-5">
+        <h1>Produits</h1>
+        <div class="top-right-button-container">
+          <button routerLink="/products/create" type="button" class="btn btn-outline-primary btn-lg top-right-button mr-1">Ajouter nouveau produit</button>
+        </div>
+        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb pt-0">
+            <li class="breadcrumb-item">
+              <a href="#">Tableau de board</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Produits</li>
+          </ol>
+        </nav>
+        <div class="separator mb-5"></div>
+        <div class="row list disable-text-selection">
+          <div *ngFor="let product of products" class="col-xl-3 col-lg-4 col-12 col-sm-6 mb-5">
+            <div class="card">
+              <div class="position-relative">
+                <a routerLink="{{ '/products/show/' + product.id }}">
+                  <img class="card-img-top" src="{{ product.image }}" alt="Card image cap">
+                </a>
+                <span *ngIf="product.inSolde" class="badge badge-pill badge-theme-1 position-absolute badge-top-left">{{ product.pourcentagePromotion }}</span>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <a routerLink="{{ '/products/show/' + product.id }}">
+                      <p class="list-item-heading mb-2">{{ product.title }}</p>
+                      <p class="list-item-heading text-semibold text-primary mb-4">{{ product.category }}</p>
+                    </a>
+                    <footer>
+                      <p class="text-muted text-small mb-0 font-weight-light">{{ product.price }} DH</p>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <nav class="mt-4 mb-3">
+              <ul class="pagination justify-content-center mb-0">
+                <li class="page-item">
+                  <a class="page-link first" href="#">
+                    <i class="simple-icon-control-start"></i>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link prev" href="#">
+                    <i class="simple-icon-arrow-left"></i>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link next" href="#" aria-label="Next">
+                    <i class="simple-icon-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link last" href="#">
+                    <i class="simple-icon-control-end"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

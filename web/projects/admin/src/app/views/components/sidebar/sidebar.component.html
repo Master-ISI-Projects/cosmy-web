@@ -2,11 +2,35 @@
   <div class="main-menu">
     <div class="scroll">
       <ul class="list-unstyled">
-        <li class="active">
-          <a href="#">
+        <li [routerLinkActive]="'active'">
+          <span class="sidebar-link" routerLink="/dashboard">
             <i class="iconsminds-shop-4"></i>
             <span>Tableau de bord</span>
-          </a>
+          </span>
+        </li>
+        <li [routerLinkActive]="'active'">
+          <span class="sidebar-link" routerLink="/members">
+            <i class="iconsminds-user"></i>
+            <span>Membres</span>
+          </span>
+        </li>
+        <li [routerLinkActive]="'active'">
+          <span class="sidebar-link" routerLink="/products">
+            <i class="iconsminds-shop-2"></i>
+            <span>Produits</span>
+          </span>
+        </li>
+        <li [routerLinkActive]="'active'">
+          <span class="sidebar-link" routerLink="/posts">
+            <i class="iconsminds-sharethis"></i>
+            <span>Articles</span>
+          </span>
+        </li>
+        <li [routerLinkActive]="'active'">
+          <span class="sidebar-link" routerLink="/orders">
+            <i class="iconsminds-pantone"></i>
+            <span>Commandes</span>
+          </span>
         </li>
       </ul>
     </div>
