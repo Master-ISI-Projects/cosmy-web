@@ -13,6 +13,8 @@ export class ProductService {
   // NavbarCounts
 	navbarCartCount = 0;
   navbarFavProdCount = 0;
+  public static nbrCart = 3;
+
   
   constructor(public http: HttpClient) { }
 
@@ -43,7 +45,7 @@ export class ProductService {
 	// Adding new Product to cart db if logged in else localStorage
 	addToCart(data: Product): void {
 		let a: Product[];
-
+    data.qty = 1;
 		a = JSON.parse(localStorage.getItem('avct_item')) || [];
 
 		a.push(data);

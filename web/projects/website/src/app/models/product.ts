@@ -3,8 +3,9 @@ export interface Product {
   title?: string;
   category: string;
   image?: string;
-  price?: string;
-  weight?: string;
+  price?: number;
+  qty?: number;
+  weight?: number;
   description?: string;
   applicationProtocol?: string;
   video?: string;

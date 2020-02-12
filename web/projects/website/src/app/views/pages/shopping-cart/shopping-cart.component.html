@@ -6,11 +6,11 @@
         <div class="row">
             <div class="col">
                 
-                <div class="page-banner text-center" >
-                    <h1>Shopping Cart</h1>
-                    <ul class="page-breadcrumb">
-                        <li><a routerLink="/home">Home</a></li>
-                        <li>Cart</li>
+                <div class="page-banner text-center">
+                    <h1 style="color:chocolate">Shopping Cart</h1>
+                    <ul class="page-breadcrumb" >
+                        <li><a routerLink="/home" style="color:chocolate">Home</a></li>
+                        <li style="color:chocolate"> Cart</li>
                     </ul>
                 </div>
                 
@@ -44,7 +44,7 @@
                                 <td class="pro-thumbnail"><a href="#"><img src="{{ product.image }}" alt="Product"></a></td>
                                 <td class="pro-title"><a href="#"> {{ product.title }} </a></td>
                                 <td class="pro-price"><span> {{ product.price }} DH </span></td>
-                                <td class="pro-quantity"><div class="pro-qty"><input type="number" value="1"></div></td>
+                                <td class="pro-quantity"><div class="pro-qty"><input type="number" value="1" min="1"> </div></td>
                                 <td class="pro-remove" ><a (click)="removeCartProduct(product)"  ><i class="fa fa-trash-o"></i></a></td>
                             </tr>
 
@@ -65,9 +65,8 @@
                         <div class="cart-summary">
                             <div class="cart-summary-wrap">
                                 <h4>Cart Summary</h4>
-                                <p>Sub Total <span>{{totalValue}}</span></p>
-                                <p>Shipping Cost <span>$00.00</span></p>
-                                <h2>Grand Total <span>$75.00</span></h2>
+                                <p>Sub Total <span>{{totalValue}} DH</span></p>
+                                <h2>Grand Total <span>{{totalValue}} DH</span></h2>
                             </div>
                             <div class="cart-summary-button">
                                 <button class="btn">Checkout</button>
