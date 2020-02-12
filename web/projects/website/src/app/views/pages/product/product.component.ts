@@ -14,12 +14,14 @@ export class ProductComponent implements OnInit {
   products: Product[] = [];
   categories: Category[] = [];
   categoryFilter: string = '';
+  nbrCart :  number
   
   constructor(private service: ProductService) { }
 
   ngOnInit() {
     this.getAllProducts();
     this.getAllCategories();
+
   }
 
   getAllProducts() {
@@ -39,5 +41,10 @@ export class ProductComponent implements OnInit {
     this.categoryFilter = category;
     this.getAllProducts();
   }
+
+
+  addToCart(product: Product) {
+		this.service.addToCart(product);
+	}
 
 }

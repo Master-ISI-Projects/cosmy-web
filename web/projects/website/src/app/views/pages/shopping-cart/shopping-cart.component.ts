@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ProductService } from '../../../services/product.service';
+import { Product} from '../../../models/product';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -6,10 +8,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
+  	cartProducts: Product[];
+	showDataNotFound = true;
+	totalValue = 0;
 
-  constructor() { }
+	// Not Found Message
+	messageTitle = 'No Products Found in Cart';
+	messageDescription = 'Please, Add Products to Cart';
 
-  ngOnInit() {
-  }
+	constructor(private productService: ProductService) {}
+
+	ngOnInit() {
+		this.getCartProduct();
+	}
+
+	
+
+	removeCartProduct(product: Product) {
+		this.productService.removeLocalCartProduct(product);
+
+		// Recalling
+		this.getCartProduct();
+	}
+
+	getCartProduct() {
+		this.cartProducts = this.productService.getLocalCartProducts();
+		}
 
 }

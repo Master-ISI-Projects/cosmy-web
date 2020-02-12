@@ -49,11 +49,10 @@
                                                                 <span *ngIf="product.inSolde == true" class="descount-sticker">- {{ product.pourcentagePromotion }} %</span>
                                                                 <span class="sticker">NEW</span>
                                                                 <div class="product-action d-flex justify-content-between">
-                                                                    <a class="product-btn" href="#">Add to Cart</a>
+                                                                    <a class="product-btn" (click)="addToCart(product)">Add to Cart</a>
                                                                     <ul class="d-flex">
-                                                                        <li><a href="#quick-view-modal-container" data-toggle="modal" title="Quick View"><i class="fa fa-eye"></i></a></li>
-                                                                        <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                                                        <li><a href="#"><i class="fa fa-exchange"></i></a></li>
+                                                                        <li><a routerLink="{{ '/product-detail/' + product.id }}" title="Quick View"><i class="fa fa-eye"></i></a></li>
+
                                                                     </ul>
                                                                 </div>
                                                             </div>

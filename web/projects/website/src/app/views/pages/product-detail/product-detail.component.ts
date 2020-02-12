@@ -40,7 +40,9 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
-
+  addToCart(product: Product) {
+		this.productService.addToCart(product);
+	}
   
 }
 

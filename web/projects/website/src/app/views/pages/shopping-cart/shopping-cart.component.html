@@ -35,34 +35,23 @@
                                 <th class="pro-title">Product</th>
                                 <th class="pro-price">Price</th>
                                 <th class="pro-quantity">Quantity</th>
-                                <th class="pro-subtotal">Total</th>
                                 <th class="pro-remove">Remove</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="pro-thumbnail"><a href="#"><img src="assets/images/product/product-1.jpg" alt="Product"></a></td>
-                                <td class="pro-title"><a href="#">Black Cable Restorer</a></td>
-                                <td class="pro-price"><span>$25.00</span></td>
+                        <tbody *ngIf="cartProducts.length > 0">
+
+                            <tr *ngFor="let product of cartProducts"> 
+                                <td class="pro-thumbnail"><a href="#"><img src="{{ product.image }}" alt="Product"></a></td>
+                                <td class="pro-title"><a href="#"> {{ product.title }} </a></td>
+                                <td class="pro-price"><span> {{ product.price }} DH </span></td>
                                 <td class="pro-quantity"><div class="pro-qty"><input type="number" value="1"></div></td>
-                                <td class="pro-subtotal"><span>$25.00</span></td>
-                                <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                <td class="pro-remove" ><a (click)="removeCartProduct(product)"  ><i class="fa fa-trash-o"></i></a></td>
                             </tr>
-                            <tr>
-                                <td class="pro-thumbnail"><a href="#"><img src="assets/images/product/product-2.jpg" alt="Product"></a></td>
-                                <td class="pro-title"><a href="#">Black Die Grinder</a></td>
-                                <td class="pro-price"><span>$25.00</span></td>
-                                <td class="pro-quantity"><div class="pro-qty"><input type="number" value="1"></div></td>
-                                <td class="pro-subtotal"><span>$25.00</span></td>
-                                <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td class="pro-thumbnail"><a href="#"><img src="assets/images/product/product-3.jpg" alt="Product"></a></td>
-                                <td class="pro-title"><a href="#">Orange Decker drill</a></td>
-                                <td class="pro-price"><span>$25.00</span></td>
-                                <td class="pro-quantity"><div class="pro-qty"><input type="number" value="1"></div></td>
-                                <td class="pro-subtotal"><span>$25.00</span></td>
-                                <td class="pro-remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+
+                        </tbody>
+                        <tbody *ngIf="cartProducts.length <= 0"> 
+                            <tr> 
+                                <td colspan="5">{{messageTitle}} </td>
                             </tr>
                         </tbody>
                     </table>
@@ -76,7 +65,7 @@
                         <div class="cart-summary">
                             <div class="cart-summary-wrap">
                                 <h4>Cart Summary</h4>
-                                <p>Sub Total <span>$75.00</span></p>
+                                <p>Sub Total <span>{{totalValue}}</span></p>
                                 <p>Shipping Cost <span>$00.00</span></p>
                                 <h2>Grand Total <span>$75.00</span></h2>
                             </div>

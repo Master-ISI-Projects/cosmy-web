@@ -27,17 +27,9 @@
 
         <!--Search Cart Start-->
         <div class="col-lg-3 col-md-3 col-6 order-lg-3 order-md-3 order-2 d-flex justify-content-end">
-          <div class="header-search">
-            <button class="header-search-toggle color-white"><i class="fa fa-search"></i></button>
-            <div class="header-search-form">
-              <form action="#">
-                <input type="text" placeholder="Type and hit enter">
-                <button><i class="fa fa-search"></i></button>
-              </form>
-            </div>
-          </div>
+
           <div class="header-cart color-white">
-            <a routerLink="/cart"><i class="fa fa-shopping-cart"></i><span>3</span></a>
+            <a routerLink="/cart"><i class="fa fa-shopping-cart" ></i><span>{{nbrCart}}</span></a>
         </div>
         </div>
         <!--Search Cart End-->

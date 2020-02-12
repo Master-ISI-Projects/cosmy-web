@@ -52,7 +52,7 @@
                                  <input value="1" type="number">
                              </div>
                             <div class="add-to-link">
-                                <button class="product-add-btn" data-text="add to cart">add to cart</button>
+                                <button type="button" class="product-add-btn" (click)="addToCart(product)">add to cart</button>
                             </div>
                         </form>
                    </div>
@@ -125,12 +125,11 @@
                         <span *ngIf="prod.inSolde == true" class="descount-sticker">- {{ prod.pourcentagePromotion }} %</span>
                         <span class="sticker">NEW</span>
                         <div class="product-action d-flex justify-content-between">
-                            <a class="product-btn" href="#">Add to Cart</a>
+                            <a class="product-btn" (click)="addToCart(prod)" >Add to Cart</a>
                             <ul class="d-flex">
-                                <li><a href="#quick-view-modal-container" data-toggle="modal" title="Quick View"><i class="fa fa-eye"></i></a></li>
-                                <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                <li><a href="#"><i class="fa fa-exchange"></i></a></li>
-                            </ul>
+                                <li><a routerLink="{{ '/product-detail/' + prod.id }}" title="Quick View"><i class="fa fa-eye"></i></a></li>
+
+                            </ul>   
                         </div>
                     </div>
                     <div class="product-content">
