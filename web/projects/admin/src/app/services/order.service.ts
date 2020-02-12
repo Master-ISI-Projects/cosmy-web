@@ -29,7 +29,12 @@ export class OrderService {
   }
 
   getLatestOrders(limit: number = 10): Observable<Order[]> {
-    const filter = '?limit=' + limit;
+    const filter = '?_limit=' + limit;
+    return this.http.get<Order[]>(this.RESOURCE_URL + filter);
+  }
+
+  getCountOrderByStatus(status: string): Observable<Order[]> {
+    const filter = '?status=' + status;
     return this.http.get<Order[]>(this.RESOURCE_URL + filter);
   }
 }

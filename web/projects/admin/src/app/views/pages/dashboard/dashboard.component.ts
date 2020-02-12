@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import {Order} from '../../../models/order';
+import {Post} from '../../../models/post';
+import {PostService} from '../../../services/post.service';
 import {OrderService} from '../../../services/order.service';
+import {Member} from '../../../models/member';
+import {MembersService} from '../../../services/members.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +13,12 @@ import {OrderService} from '../../../services/order.service';
 })
 export class DashboardComponent implements OnInit {
 
-  latestOrders: Order[] = [];
+  latestPosts: Post[] = [];
+  latestMembers: Member[] = [];
+  penddingOrdersCount: number = 0;
+  cancledOrdersCount: number = 0;
+  confirmedOrdersCount: number = 0;
+
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -38,18 +46,45 @@ export class DashboardComponent implements OnInit {
   };
 
   constructor(
-    private orderService: OrderService
+    private postService: PostService,
+    private orderService: OrderService,
+    private memberService: MembersService,
   ) { }
 
-  ngOnInit() {
-    this.loadLatestOrders();
+  ngOnInit(): void {
+    this.loadLatestPosts();
+    this.loadLatestMembers();
+    this.loadCountsOfEntries();
   }
 
-  loadLatestOrders() {
-    this.orderService.findAll()
+  loadLatestPosts(): void {
+    this.postService.getLatestPosts(5)
       .subscribe(response => {
-        console.log(response);
-        this.latestOrders = response;
+        this.latestPosts = response;
+      });
+  }
+
+  loadLatestMembers(): void {
+    this.memberService.getLatestMembers(3)
+      .subscribe(response => {
+        this.latestMembers = response;
+      });
+  }
+
+  loadCountsOfEntries(): void {
+    this.orderService.getCountOrderByStatus('En Attent')
+      .subscribe(response => {
+        this.penddingOrdersCount = response.length;
+      });
+
+    this.orderService.getCountOrderByStatus('Annulé')
+      .subscribe(response => {
+        this.cancledOrdersCount = response.length;
+      });
+
+    this.orderService.getCountOrderByStatus('Confirmé')
+      .subscribe(response => {
+        this.confirmedOrdersCount = response.length;
       });
   }
 

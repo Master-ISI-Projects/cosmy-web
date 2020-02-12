@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Member} from '../models/member';
 import {Post} from '../models/post';
+import {Order} from '../models/order';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,10 @@ export class PostService {
 
   save(post: Post): Observable<Post> {
     return this.http.post(this.RESOURCE_URL, post);
+  }
+
+  getLatestPosts(limit: number = 10): Observable<Post[]> {
+    const filter = '?_limit=' + limit;
+    return this.http.get<Post[]>(this.RESOURCE_URL + filter);
   }
 }

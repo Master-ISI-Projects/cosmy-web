@@ -2,7 +2,7 @@ var faker = require('faker');
 
 var database = {members: [], products: [], posts: [], categories: [], comments : [], orders: []};
 var categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
-var orderStatus = ['En Attent', 'Annullé', 'Confirmé'];
+var orderStatus = ['En Attent', 'Annulé', 'Confirmé'];
 
 for (var i = 1; i< 20; i++) {
   database.members.push({

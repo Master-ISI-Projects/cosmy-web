@@ -19,7 +19,7 @@ export class IndexOrderComponent implements OnInit {
     this.loadPosts();
   }
 
-  loadPosts() {
+  loadPosts(): void {
     this.orderService.findAll()
       .subscribe(response => {
         console.log(response);
