@@ -1,4 +1,4 @@
-<div class="page-banner-section section bg-gray">
+<div class="page-banner-section section bg-gray" style="background-image: url(assets/images/headers/header-cart1.png);">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -50,42 +50,11 @@
                             </div>
                         </div>
                     </article>
-                    <div class="relatedposts">
-                        <h3>Related posts</h3>
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6">
-                                <div class="relatedthumb mb-xs-30">
-                                    <div class="image">
-                                        <a><img src="assets/images/blog/blog1.png" alt=""></a>
-                                    </div>
-                                    <h4><a>Post with Gallery</a></h4>
-                                    <span class="rl-post-date">December 1, 2018</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="relatedthumb mb-xs-30">
-                                    <div class="image">
-                                        <a><img src="assets/images/blog/blog2.png" alt=""></a>
-                                    </div>
-                                    <h4><a >Post with Gallery</a></h4>
-                                    <span class="rl-post-date">December 1, 2018</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="relatedthumb mb-xs-30">
-                                    <div class="image">
-                                        <a ><img src="assets/images/blog/blog3.png" alt=""></a>
-                                    </div>
-                                    <h4><a >Post with Gallery</a></h4>
-                                    <span class="rl-post-date">December 1, 2018</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
                 </div>
                 <!--Comment Area Start-->
                 <div class="comments-area mt-85 mt-lg-65 mt-md-55 mt-md-45 mt-sm-15 mt-xs-0" >
-                    <h3>{{ comments.length }} comments</h3>
+                    <h3>comments ({{ comments2?.length }})</h3>
                     <ol class="commentlist" *ngFor="let comment of comments2 ">
                         <li>
                             <div class="single-comment">
@@ -129,8 +98,25 @@
                             
                         </div>
                     </form>
-                </div>
+                </div>  <br> <br> <br>
                 <!--Comment Area End-->
+            </div> 
+           
+            <div class="relatedposts">
+                <h3>Autres posts</h3>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6"  *ngFor="let post of posts | slice:0:3;" >
+                        <div class="relatedthumb mb-xs-30" >
+                            <div class="image">
+                                <a routerLink="{{ '/blog-detail/' + post.id }}" (click)="reflicher()"><img [src]="post.image"  ></a>
+                            </div>
+                            <h4><a >Post with Gallery</a></h4>
+                            <span class="rl-post-date">December 1, 2018</span>
+                        </div>
+                    </div>
+                
+                
+                </div>
             </div>
         </div>
     </div>

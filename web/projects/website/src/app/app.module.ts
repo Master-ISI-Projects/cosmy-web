@@ -18,6 +18,7 @@ import { PostService } from './services/post.service';
 import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart.component';
 
@@ -45,7 +46,8 @@ import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart
     SlickCarouselModule,
     ReactiveFormsModule,
     ChatterModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [
     PostService

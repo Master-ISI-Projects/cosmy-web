@@ -3,7 +3,7 @@ var faker = require('faker');
 var database = {members: [], products: [], posts: [], categories: [], comments : []};
 var categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
 
-for (var i = 1; i< 20; i++) {
+for (var i = 1; i< 10; i++) {
   database.members.push({
     id: i,
     firstName: faker.name.firstName(),
@@ -29,7 +29,9 @@ for (var i = 1; i< 20; i++) {
     qte: faker.random.number(),
     pourcentagePromotion: faker.random.number(),
     favourite: faker.random.number(),
-    productSeller: faker.random.number()
+    productSeller: faker.random.number(),
+    inSolde : faker.random.boolean()
+
   });
 
   database.posts.push({

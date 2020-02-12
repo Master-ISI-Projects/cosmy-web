@@ -18,7 +18,7 @@ export class BlogDetailComponent implements OnInit {
   post: Post;
   postId: number;
 
-  
+  posts: Post[] = [];
   comments2:Comments[];
 
   private comments:Comments={
@@ -57,7 +57,7 @@ export class BlogDetailComponent implements OnInit {
     this.postService.getPostById(this.postId).subscribe(response => {
       this.post =  response;
       this.loadComments();
-      
+      this.getPosts();
      
     });
   }
@@ -70,18 +70,19 @@ export class BlogDetailComponent implements OnInit {
  
 
   onAjouter(){
-
-
-  
     this.comments.commentedBy="Hamza";
     this.comments.postId= this.postId;
     this.comments.createdAt = this.myDate;
     this.comments.comment = this.MerchantResourceForm.get('comment').value
-    
     this.add();
-    this.loadComments();
+    this.loadComments();  
+  }
+  getPosts() {
 
-   
+    this.postService.getAll().subscribe(response => {
+      console.log(response);
+      this.posts =  response;
+    });
   }
 
 

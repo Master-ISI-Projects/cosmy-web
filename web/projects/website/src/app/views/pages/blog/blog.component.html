@@ -1,5 +1,5 @@
 <!-- Page Banner Section Start -->
-<div class="page-banner-section section bg-gray">
+<div class="page-banner-section section bg-gray" style="background-image: url(assets/images/headers/header-cart1.png);">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <!-- Single Blog Start -->
-            <div class="blog col-lg-4 col-md-4 col-sm-4" *ngFor="let post of posts">
+            <div class="blog col-lg-4 col-md-4 col-sm-4" *ngFor="let post of posts ">
                 <div class="blog-inner mb-20">
                     <div class="media"><a routerLink="{{ '/blog-detail/' + post.id }}" class="image"><img [src]="post.image" alt="" ></a></div>
                     <div class="content">
@@ -59,34 +59,7 @@
     <div class="container">
         <div class="row">
 
-            <!--Brand Slider start-->
-            <div class="tf-element-carousel section" data-slick-options='{
-                "slidesToShow": 5,
-                "slidesToScroll": 1,
-                "infinite": true,
-                "arrows": false,
-                "autoplay": true
-                }'  data-slick-responsive='[
-                {"breakpoint":1199, "settings": {
-                "slidesToShow": 4
-                }},
-                {"breakpoint":992, "settings": {
-                "slidesToShow": 4
-                }},
-                {"breakpoint":768, "settings": {
-                "slidesToShow": 3
-                }},
-                {"breakpoint":576, "settings": {
-                "slidesToShow": 1
-                }}
-                ]'>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-1.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-2.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-3.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-4.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-5.png" alt=""></a></div>
-            </div>
-            <!--Brand Slider end-->
+            
 
         </div>
     </div>
