@@ -13,21 +13,35 @@ export class ProductDetailComponent implements OnInit {
 
   product: Product;
   productId: number;
+  productsSimilaire: Product[] = [];
+  categoryFilter: string = '';
+
   
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService
   ) {
-    this.productId = this.route.snapshot.params.postId;
-    console.log(this.productId)
+    this.productId = this.route.snapshot.params.productId;
+    console.log(this.productId);
   }
 
   ngOnInit() {
     this.productService.getProductById(this.productId).subscribe(response => {
       this.product =  response;
+      this.categoryFilter = this.product.category;
+      this.getAllProductsSimilaire();
+
     });
   }
 
+  getAllProductsSimilaire() {
+    this.productService.getAll(this.categoryFilter).subscribe(response => {
+      this.productsSimilaire = response;
+    });
+  }
+
+
+  
 }
 
 

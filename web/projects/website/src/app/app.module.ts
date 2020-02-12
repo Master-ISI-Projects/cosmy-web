@@ -16,6 +16,7 @@ import { ProductDetailComponent } from './views/pages/product-detail/product-det
 import { BlogComponent } from './views/pages/blog/blog.component';
 import { PostService } from './services/post.service';
 import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.component';
+import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.compo
     ProductComponent,
     ProductDetailComponent,
     BlogComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    ShoppingCartComponent
   ],
   imports: [
     HttpClientModule,
