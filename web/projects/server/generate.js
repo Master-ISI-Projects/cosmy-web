@@ -1,6 +1,6 @@
 var faker = require('faker');
 
-var database = {members: [], products: [], posts: [], categories: []};
+var database = {members: [], products: [], posts: [], categories: [], comments : []};
 
 for (var i = 1; i<= 20; i++) {
   database.members.push({
@@ -35,7 +35,7 @@ for (var i = 1; i<= 20; i++) {
     title: faker.lorem.words(),
     createdAt: faker.date.recent(),
     content: faker.lorem.text(),
-    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 3) + 1) + '.png',
+    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 4) + 1) + '.png',
     author: faker.name.firstName() + ' ' + faker.name.lastName(),
     createdAt: faker.date.past(i)
   });
@@ -44,6 +44,13 @@ for (var i = 1; i<= 20; i++) {
     id: i,
     title: faker.lorem.words(),
     image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 3) + 1) + '.png',
+  });
+
+  database.comments.push({
+    id: i,
+    postId: (Math.floor(Math.random() * 19) + 1),
+    commentedBy: faker.name.firstName(),
+    comment: faker.lorem.text(),
   });
 }
 

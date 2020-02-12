@@ -15,6 +15,9 @@ import { ChatterModule } from './modules/chatter/chatter.module';
 import { BlogComponent } from './views/pages/blog/blog.component';
 import { PostService } from './services/post.service';
 import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.compo
     HomeComponent,
     ProductComponent,
     BlogComponent,
-    BlogDetailComponent
+   
+    BlogDetailComponent,
+    AppComponent
   ],
   imports: [
     HttpClientModule,
@@ -34,7 +39,9 @@ import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.compo
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
-    ChatterModule
+    ReactiveFormsModule,
+    ChatterModule,
+    FormsModule
   ],
   providers: [
     PostService
