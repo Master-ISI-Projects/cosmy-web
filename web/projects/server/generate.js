@@ -1,11 +1,7 @@
 var faker = require('faker');
 
-<<<<<<< HEAD
 var database = {members: [], products: [], posts: [], categories: [], comments : []};
-=======
-var database = {members: [], products: [], posts: [], categories: []};
 var categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
->>>>>>> c2aa6abfb281f90fc492c6c278aa9e095e1c9f0f
 
 for (var i = 1; i< 20; i++) {
   database.members.push({
