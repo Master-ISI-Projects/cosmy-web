@@ -1,7 +1,8 @@
 var faker = require('faker');
 
-var database = {members: [], products: [], posts: [], categories: []};
+var database = {members: [], products: [], posts: [], categories: [], orders: []};
 var categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
+var orderStatus = ['En Attent', 'Annullé', 'Confirmé'];
 
 for (var i = 1; i< 20; i++) {
   database.members.push({
@@ -12,8 +13,8 @@ for (var i = 1; i< 20; i++) {
     email:faker.internet.email(),
     password:faker.internet.password(),
     phoneNumber:faker.phone.phoneNumber(),
-    postsCount: 3,
-    employeesCount: 3,
+    postsCount: (Math.floor(Math.random() * 5) + 1),
+    employeesCount: (Math.floor(Math.random() * 7) + 1),
   });
 
   database.products.push({
@@ -27,6 +28,7 @@ for (var i = 1; i< 20; i++) {
     applicationProtocol: faker.lorem.text(),
     video: faker.image.dataUri(),
     qte: faker.random.number(),
+    inSold: faker.random.boolean(),
     pourcentagePromotion: faker.random.number(),
     favourite: faker.random.number(),
     productSeller: faker.random.number()
@@ -35,7 +37,6 @@ for (var i = 1; i< 20; i++) {
   database.posts.push({
     id: i,
     title: faker.lorem.words(),
-    createdAt: faker.date.recent(),
     content: faker.lorem.text(),
     image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 3) + 1) + '.png',
     author: faker.name.firstName() + ' ' + faker.name.lastName(),
@@ -48,6 +49,28 @@ for (let index = 0; index < categories.length; index++) {
     id: i,
     title: categories[index],
     image: 'assets/images/categories/cate-' + (Math.floor(Math.random() * 3) + 1) + '.png',
+  });
+}
+
+for (let i = 0; i < 20; i++) {
+  const details = [];
+
+  for (let index = 0; index < 20; index++) {
+    details.push({
+      id: index,
+      qte: (Math.floor(Math.random() * 5) + 1),
+      products: faker.commerce.productName()
+    })
+  }
+
+  database.orders.push({
+    id: i,
+    billingAdress: faker.lorem.text(),
+    deliveryAdress: faker.lorem.text(),
+    status: orderStatus[(Math.floor(Math.random() * 2) + 0)],
+    createdAt: faker.date.past(i),
+    customer: faker.name.firstName() + ' ' + faker.name.lastName(),
+    orderDetails: details
   });
 }
 

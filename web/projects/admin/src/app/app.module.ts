@@ -23,6 +23,15 @@ import {MembersService} from './services/members.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ShowMemebersComponent } from './views/pages/members/show-memebers/show-memebers.component';
 import {FormsModule} from '@angular/forms';
+import { IndexProductsComponent } from './views/pages/products/index-products/index-products.component';
+import { CreateProductsComponent } from './views/pages/products/create-products/create-products.component';
+import { ShowProductsComponent } from './views/pages/products/show-products/show-products.component';
+import { IndexPostsComponent } from './views/pages/posts/index-posts/index-posts.component';
+import { CreatePostsComponent } from './views/pages/posts/create-posts/create-posts.component';
+import { ShowPostsComponent } from './views/pages/posts/show-posts/show-posts.component';
+import { IndexOrderComponent } from './views/orders/index-order/index-order.component';
+import { ShowOrderComponent } from './views/orders/show-order/show-order.component';
+import {OrderService} from './services/order.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +47,15 @@ import {FormsModule} from '@angular/forms';
     // Members
     IndexMembersComponent,
     CreateMembersComponent,
-    ShowMemebersComponent
+    ShowMemebersComponent,
+    IndexProductsComponent,
+    CreateProductsComponent,
+    ShowProductsComponent,
+    IndexPostsComponent,
+    CreatePostsComponent,
+    ShowPostsComponent,
+    IndexOrderComponent,
+    ShowOrderComponent
   ],
   imports: [
     HttpClientModule,
@@ -49,7 +66,8 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   providers: [
-    MembersService
+    MembersService,
+    OrderService
   ],
   bootstrap: [AppComponent]
 })

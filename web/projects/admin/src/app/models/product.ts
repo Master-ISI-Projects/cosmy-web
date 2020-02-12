@@ -8,9 +8,10 @@ export interface Product {
   description?: string;
   applicationProtocol?: string;
   video?: string;
-  inSolde?: boolean;  
-  pourcentagePromotion? : number,
-  favourite? : boolean,
-  productSeller?: string,
-  createdAt : string,
+  inSolde?: boolean;
+  pourcentagePromotion: number;
+  favourite: boolean;
+  productSeller: string;
+  createdAt: string;
+  qte: number;
 }
