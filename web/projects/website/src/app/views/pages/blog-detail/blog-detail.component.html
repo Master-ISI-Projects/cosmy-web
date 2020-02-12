@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                
+
                 <div class="page-banner text-center">
                     <h1>Blog Details</h1>
                     <ul class="page-breadcrumb">
@@ -10,7 +10,7 @@
                         <li>Blog Details</li>
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
                     <article class="blog_single blog-details">
                         <header class="entry-header">
                             <h2 class="entry-title">
-                                <div class="media"><img class="post-image" [src]="post?.image"></div>
+                                <div class="media"><img class="post-image" *ngIf="post" src="{{post?.image}}"></div>
                             </h2>
                             <span class="post-author">
                             <span class="post-by"> Posts by : </span> {{ post?.author }} </span>
@@ -42,39 +42,9 @@
                                     <p>{{ post?.content }}</p>
                                     <!--Blog Post Tag-->
                                     <div class="single-post-tag">
-                                        <a href="#">3 comments</a>
-                                        Tags: 
-                                        <a href="#">fashion</a>,
-                                        <a href="#">t-shirt</a>,
-                                        <a href="#">white</a>,
-                                    </div>
-                                    <!--Blog Post Tag-->
-                                    <div class="social-sharing">
-                                        <div class="widget widget_socialsharing_widget">
-                                            <h3 class="widget-title">Share this post</h3>
-                                            <ul class="blog-social-icons">
-                                                <li>
-                                                    <a target="_blank" title="Facebook" href="#" class="facebook social-icon">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" title="twitter" href="#" class="twitter social-icon">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" title="pinterest" href="#" class="pinterest social-icon">
-                                                        <i class="fa fa-pinterest"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a target="_blank" title="linkedin" href="#" class="linkedin social-icon">
-                                                        <i class="fa fa-linkedin"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+
+                                        Tags:
+
                                     </div>
                                 </div>
                             </div>
@@ -86,27 +56,27 @@
                             <div class="col-md-4 col-sm-6">
                                 <div class="relatedthumb mb-xs-30">
                                     <div class="image">
-                                        <a href="#"><img src="assets/images/blog/blog1.png" alt=""></a>
+                                        <a><img src="assets/images/blog/blog1.png" alt=""></a>
                                     </div>
-                                    <h4><a href="#">Post with Gallery</a></h4>
+                                    <h4><a>Post with Gallery</a></h4>
                                     <span class="rl-post-date">December 1, 2018</span>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="relatedthumb mb-xs-30">
                                     <div class="image">
-                                        <a href="#"><img src="assets/images/blog/blog2.png" alt=""></a>
+                                        <a><img src="assets/images/blog/blog2.png" alt=""></a>
                                     </div>
-                                    <h4><a href="#">Post with Gallery</a></h4>
+                                    <h4><a >Post with Gallery</a></h4>
                                     <span class="rl-post-date">December 1, 2018</span>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="relatedthumb mb-xs-30">
                                     <div class="image">
-                                        <a href="#"><img src="assets/images/blog/blog3.png" alt=""></a>
+                                        <a ><img src="assets/images/blog/blog3.png" alt=""></a>
                                     </div>
-                                    <h4><a href="#">Post with Gallery</a></h4>
+                                    <h4><a >Post with Gallery</a></h4>
                                     <span class="rl-post-date">December 1, 2018</span>
                                 </div>
                             </div>
@@ -114,55 +84,19 @@
                     </div>
                 </div>
                 <!--Comment Area Start-->
-                <div class="comments-area mt-85 mt-lg-65 mt-md-55 mt-md-45 mt-sm-15 mt-xs-0">
-                    <h3>3 comments</h3>
-                    <ol class="commentlist">
+                <div class="comments-area mt-85 mt-lg-65 mt-md-55 mt-md-45 mt-sm-15 mt-xs-0" >
+                    <h3>{{ comments.length }} comments</h3>
+                    <ol class="commentlist" *ngFor="let comment of comments2 ">
                         <li>
                             <div class="single-comment">
                                 <div class="comment-avatar img-full">
                                     <img src="assets/images/icons/author.png" alt="">
                                 </div>
                                 <div class="comment-info">
-                                    <a href="#">admin</a>
-                                    <div class="reply">
-                                        <a href="#">Reply</a>
-                                    </div>
-                                    <span class="date">October 6, 2014 at 1:38 am</span>
-                                    <p>just a nice post</p>
-                                </div>
-                            </div>
-                            <ol>
-                                <li>
-                                    <div class="single-comment">
-                                        <div class="comment-avatar img-full">
-                                            <img src="assets/images/icons/author.png" alt="">
-                                        </div>
-                                        <div class="comment-info">
-                                            <a href="#">admin</a>
-                                            <div class="reply">
-                                                <a href="#">Reply</a>
-                                            </div>
-                                            <span class="date">October 6, 2014 at 1:38 am</span>
-                                            <p>just a nice post</p>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <ol class="commentlist">
-                        <li>
-                            <div class="single-comment">
-                                <div class="comment-avatar img-full">
-                                    <img src="assets/images/icons/author.png" alt="">
-                                </div>
-                                <div class="comment-info">
-                                    <a href="#">admin</a>
-                                    <div class="reply">
-                                        <a href="#">Reply</a>
-                                    </div>
-                                    <span class="date">October 6, 2014 at 1:38 am</span>
-                                    <p>just a nice post</p>
+                                    <a>{{comment?.commentedBy}}</a>
+
+                                    <span class="date">{{comment.createdAt}}</span>
+                                    <p>{{comment?.comment}}</p>
                                 </div>
                             </div>
                         </li>
@@ -170,33 +104,16 @@
                 </div>
                 <div class="comment-box mt-30">
                     <h3>Leave a Comment</h3>
-                    <form action="#">
+                    <form (submit)="onAjouter()" class="normal-form" [formGroup]="MerchantResourceForm">
                         <p class="comment-note"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="single-input mb-20">
                                     <label>Comment*</label>
-                                    <textarea name="commenter-message" placeholder="Message" id="commenter-message" cols="30" rows="5"></textarea>
+                                    <textarea name="commenter-message" formControlName ="comment" placeholder="Message" id="commenter-message" cols="30" rows="5"></textarea>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="single-input mb-20">
-                                    <label>Name*</label>
-                                    <input name="commenter-name" id="commenter-name" type="text">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-input mb-20">
-                                    <label>Email*</label>
-                                    <input name="commenter-email" id="commenter-email" type="email">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="single-input mb-20">
-                                    <label>Website*</label>
-                                    <input name="commenter-url" id="commenter-url" type="text">
-                                </div>
-                            </div>
+
                             <div class="col-md-12">
                                 <div class="single-input">
                                     <button class="form-button" type="submit">Post Comment</button>
@@ -212,42 +129,4 @@
 </div>
 <!-- Blog Section End -->
 
-<!--Brand section start-->
-<div
-    class="brand-section section border-top pt-90 pt-lg-70 pt-md-65 pt-sm-55 pt-xs-40 pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
-    <div class="container">
-        <div class="row">
 
-            <!--Brand Slider start-->
-            <div class="tf-element-carousel section" data-slick-options='{
-                "slidesToShow": 5,
-                "slidesToScroll": 1,
-                "infinite": true,
-                "arrows": false,
-                "autoplay": true
-                }'  data-slick-responsive='[
-                {"breakpoint":1199, "settings": {
-                "slidesToShow": 4
-                }},
-                {"breakpoint":992, "settings": {
-                "slidesToShow": 4
-                }},
-                {"breakpoint":768, "settings": {
-                "slidesToShow": 3
-                }},
-                {"breakpoint":576, "settings": {
-                "slidesToShow": 1
-                }}
-                ]'>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-1.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-2.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-3.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-4.png" alt=""></a></div>
-                <div class="brand col"><a href="#"><img src="assets/images/brands/brand-5.png" alt=""></a></div>
-            </div>
-            <!--Brand Slider end-->
-
-        </div>
-    </div>
-</div>
-<!--Brand section end-->

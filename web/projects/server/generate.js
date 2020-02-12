@@ -1,6 +1,6 @@
 var faker = require('faker');
 
-var database = {members: [], products: [], posts: [], categories: [], orders: []};
+var database = {members: [], products: [], posts: [], categories: [], comments : [], orders: []};
 var categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
 var orderStatus = ['En Attent', 'Annullé', 'Confirmé'];
 
@@ -38,7 +38,7 @@ for (var i = 1; i< 20; i++) {
     id: i,
     title: faker.lorem.words(),
     content: faker.lorem.text(),
-    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 3) + 1) + '.png',
+    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 4) + 1) + '.png',
     author: faker.name.firstName() + ' ' + faker.name.lastName(),
     createdAt: faker.date.past(i)
   });
@@ -49,6 +49,13 @@ for (let index = 0; index < categories.length; index++) {
     id: i,
     title: categories[index],
     image: 'assets/images/categories/cate-' + (Math.floor(Math.random() * 3) + 1) + '.png',
+  });
+
+  database.comments.push({
+    id: i,
+    postId: (Math.floor(Math.random() * 19) + 1),
+    commentedBy: faker.name.firstName(),
+    comment: faker.lorem.text(),
   });
 }
 

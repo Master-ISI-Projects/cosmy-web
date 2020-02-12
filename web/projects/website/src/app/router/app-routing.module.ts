@@ -6,12 +6,15 @@ import { ProductComponent } from '../views/pages/product/product.component';
 import { ProductDetailComponent } from '../views/pages/product-detail/product-detail.component';
 import { BlogComponent } from '../views/pages/blog/blog.component';
 import { BlogDetailComponent } from '../views/pages/blog-detail/blog-detail.component';
+import { ShoppingCartComponent } from '../views/pages/shopping-cart/shopping-cart.component';
+
 
 const routes: Routes = [
   { path: '', component: BlankComponent },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductComponent },
   { path: 'product-detail/:productId', component: ProductDetailComponent },
+  { path: 'cart', component: ShoppingCartComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog-detail/:postId', component:   BlogDetailComponent }
 ];
