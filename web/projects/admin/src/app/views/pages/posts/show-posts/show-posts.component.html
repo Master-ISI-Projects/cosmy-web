@@ -1,0 +1,66 @@
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 mb-5">
+        <h1>{{ post.title }}</h1>
+        <div class="top-right-button-container">
+          <button routerLink="/products" type="button" class="btn btn-outline-primary btn-lg top-right-button mr-1">Articles</button>
+        </div>
+        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb pt-0">
+            <li class="breadcrumb-item">
+              <a routerLink="/dashboard">Tableau de board</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a routerLink="/posts">Articles</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">{{ post.title }}</li>
+          </ol>
+        </nav>
+        <div class="separator mb-5"></div>
+        <div class="row">
+          <div class="col-12 col-md-12 col-xl-8 col-left">
+            <div class="card mb-4">
+              <div class="lightbox">
+                <a href="{{ post.image }}">
+                  <img alt="detail" src="{{ post.image }}" class="responsive product-image border-0 card-img-top mb-3">
+                </a>
+              </div>
+              <div class="card-body">
+                <div class="mb-5">
+                  <h5 class="card-title">{{ post.title }}</h5>
+                  <p>{{ post.content }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-12 col-xl-4 col-right">
+            <div class="card mb-4">
+              <div class="card-body text-center pt-5 pb-5">
+                <div>
+                  <img alt="thumb" class="img-thumbnail border-0 rounded-circle mb-4 list-thumbnail mx-auto" src="assets/img/default-user-picture.png">
+                  <h5 class="mb-0 font-weight-semibold color-theme-1">{{ post.author }}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="d-flex flex-row align-items-center">
+                  <a class="d-block position-relative" href="#">
+                    <i class="iconsminds-tag large-icon initial-height"></i>
+                  </a>
+                  <div class="pl-3 pt-2 pr-2 pb-2">
+                    <a href="#">
+                      <p class="list-item-heading mb-1">{{ post.createdAt }}</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,16 @@
+.sidebar-link {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  border-bottom: 1px solid #f3f3f3;
+  color: #3a3a3a;
+  transition: color .3s;
+  transition: background .3s;
+  cursor: pointer;
+  outline: none;
+}

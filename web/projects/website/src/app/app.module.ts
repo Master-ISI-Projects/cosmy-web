@@ -19,7 +19,6 @@ import { BlogDetailComponent } from './views/pages/blog-detail/blog-detail.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
 import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart.component';
 
 @NgModule({
@@ -33,7 +32,6 @@ import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart
     ProductComponent,
     ProductDetailComponent,
     BlogComponent,
-   
     BlogDetailComponent,
     AppComponent ,
     ShoppingCartComponent

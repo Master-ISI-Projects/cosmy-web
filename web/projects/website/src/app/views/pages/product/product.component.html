@@ -3,20 +3,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 order-lg-1 order-2">
-                        <!-- Single Sidebar Start  -->
                         <div class="common-sidebar-widget">
                             <h3 class="sidebar-title">CATEGORY</h3>
                             <ul class="sidebar-list">
-                                <li *ngFor="let category of categories" > 
+                                <li *ngFor="let category of categories" >
                                     <a (click)="applyFilter(category.title)" ><i class="fa fa-angle-right"></i>{{ category.title }} <span class="count"></span></a>
                                 </li>
                             </ul>
                         </div>
-                        <!-- Single Sidebar End  -->
-
                     </div>
                     <div class="col-lg-9 order-lg-2 order-1">
-                        
                         <div class="row">
                             <div class="col-12">
                                 <!-- Grid & List View Start -->
@@ -47,7 +43,6 @@
                                                                     <img src="{{ product.image }}" alt="">
                                                                 </a>
                                                                 <span *ngIf="product.inSolde == true" class="descount-sticker">- {{ product.pourcentagePromotion }} %</span>
-                                                                <span class="sticker">NEW</span>
                                                                 <div class="product-action d-flex justify-content-between">
                                                                     <a class="product-btn" (click)="addToCart(product)">Add to Cart</a>
                                                                     <ul class="d-flex">

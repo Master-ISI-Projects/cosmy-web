@@ -19,7 +19,7 @@ export class BlogDetailComponent implements OnInit {
   postId: number;
 
   posts: Post[] = [];
-  comments2:Comments[];
+ comments2:Comments[];
 
   private comments:Comments={
     id:null,
@@ -28,23 +28,23 @@ export class BlogDetailComponent implements OnInit {
     commentedBy:'',
     comment:'',
   }
- 
+
   MerchantResourceForm  = new FormGroup({
-   
+
    comment: new FormControl(''),
   });
-  
-  
+
+
   myDate = new Date();
   add()
   {
-  
+
     this.commentService.add(this.comments).subscribe(response => console.log('Seccess!', response),
     error => console.error('Error!' , error)
     );
   }
 
- 
+
   constructor(
     private route: ActivatedRoute,
     private postService: PostService,
@@ -57,9 +57,8 @@ export class BlogDetailComponent implements OnInit {
     this.postService.getPostById(this.postId).subscribe(response => {
       this.post =  response;
       this.loadComments();
-      this.getPosts();
-     
-    });
+        this.getPosts();
+     });
   }
 
   loadComments() {
@@ -67,23 +66,24 @@ export class BlogDetailComponent implements OnInit {
       this.comments2 =  response;
     });
   }
- 
+
 
   onAjouter(){
+    
     this.comments.commentedBy="Hamza";
     this.comments.postId= this.postId;
     this.comments.createdAt = this.myDate;
-    this.comments.comment = this.MerchantResourceForm.get('comment').value
+    this.comments.comment = this.MerchantResourceForm.get('comment').value;
     this.add();
     this.loadComments();  
   }
   getPosts() {
 
+
     this.postService.getAll().subscribe(response => {
       console.log(response);
       this.posts =  response;
-    });
-  }
+    }); }
 
 
 }
