@@ -18,7 +18,6 @@ export class BlogDetailComponent implements OnInit {
     private postService: PostService
   ) {
     this.postId = this.route.snapshot.params.postId;
-    console.log(this.postId)
   }
 
   ngOnInit() {
