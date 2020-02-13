@@ -105,32 +105,6 @@ export class MainAdapter extends ChatAdapter implements IChatGroupAdapter {
 
   sendMessage(message: Message): void {
       console.log(message);
-    setTimeout(() => {
-      let replyMessage = new Message();
-
-      replyMessage.message = "You have typed '" + message.message + "'";
-      replyMessage.dateSent = new Date();
-
-      if (isNaN(message.toId)) {
-        let group = MainAdapter.mockedParticipants.find(x => x.id == message.toId) as Group;
-
-        // Message to a group. Pick up any participant for this
-        let randomParticipantIndex = Math.floor(Math.random() * group.chattingTo.length);
-        replyMessage.fromId = group.chattingTo[randomParticipantIndex].id;
-
-        replyMessage.toId = message.toId;
-
-        this.onMessageReceived(group, replyMessage);
-      }
-      else {
-        replyMessage.fromId = message.toId;
-        replyMessage.toId = message.fromId;
-
-        let user = MainAdapter.mockedParticipants.find(x => x.id == replyMessage.fromId);
-
-        this.onMessageReceived(user, replyMessage);
-      }
-    }, 1000);
   }
 
   groupCreated(group: Group): void {

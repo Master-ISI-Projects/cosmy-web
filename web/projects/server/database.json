@@ -728,6 +728,34 @@
       "postId": 16,
       "commentedBy": "Valentin",
       "comment": "Asperiores voluptas est et ea architecto similique omnis accusantium omnis.\nCupiditate eveniet ut.\nNemo beatae adipisci.\nPariatur tenetur illo earum sint inventore autem illo quaerat qui.\nDolores aut eaque dolor voluptatem minus adipisci eaque iusto."
+    },
+    {
+      "id": 21,
+      "createdAt": "2020-02-13T07:29:28.353Z",
+      "postId": "2",
+      "commentedBy": "Hamza",
+      "comment": "test"
+    },
+    {
+      "id": 22,
+      "createdAt": "2020-02-13T07:29:28.353Z",
+      "postId": "2",
+      "commentedBy": "Hamza",
+      "comment": "test"
+    },
+    {
+      "id": 23,
+      "createdAt": "2020-02-13T07:29:28.353Z",
+      "postId": "2",
+      "commentedBy": "Hamza",
+      "comment": "test"
+    },
+    {
+      "id": 24,
+      "createdAt": "2020-02-13T07:29:28.353Z",
+      "postId": "2",
+      "commentedBy": "Hamza",
+      "comment": "test"
     }
   ],
   "orders": [
