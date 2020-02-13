@@ -15,7 +15,7 @@
                 <!-- Single Banner Start -->
                 <div class="single-banner mb-30">
                     <a href="#">
-                        <img src="assets/images/banner/h1-banner-1.png" alt="">
+                        <img src="assets/images/2.jpg" alt="">
                     </a>
                 </div>
                 <!-- Single Banner End -->
@@ -39,68 +39,7 @@
         </div>
     </div>
 </div>
-<!--Deal Of Product section start-->
-<div class="deal-product-section section pt-60 pt-lg-50 pt-md-30 pt-sm-30 pt-xs-20">
-    <div class="container">
-        <div class="row">
-            <!-- Section Title Start -->
-            <div class="col">
-                <div class="section-title mb-40 mb-xs-20">
-                    <h2>Deals of the day</h2>
-                </div>
-            </div>
-            <!-- Section Title End -->
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <!-- Single Deal Product Start -->
-                <div class="single-deal-product">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6">
-                            <div class="deal-product-img">
-                                <a href="single-product.html">
-                                    <img src="assets/images/deal-product/product-2.jpg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6">
-                            <div class="deal-product-content">
-                                <h3><a href="single-product.html">Brass Acces1</a></h3>
-                                <div class="ratting">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <h4 class="price"><span class="new">€60.00</span><span
-                                        class="old">€70.00</span></h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
-                                    volutpat. Ut wisi..</p>
-                                <div class="cs-countdown black-color">
-                                    <div class="pro-countdown" data-countdown="2020/08/21"></div>
-                                </div>
-                                <div class="actoion-box">
-                                    <div class="product-action d-flex justify-content-between">
-                                        <a class="product-btn" href="#">Add to Cart</a>
-                                        <ul class="d-flex">
-                                            <li><a href="#quick-view-modal-container" data-toggle="modal" title="Quick View"><i class="fa fa-eye"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-exchange"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Deal Product End -->
-            </div>
-        </div>
-    </div>
-</div>
-<!--Deal Of Product section end-->
+
 <!--Banner section end-->
 
 <!--Product section start-->
@@ -374,65 +313,23 @@
         </div>
         <div class="row">
             <!-- Single Blog Start -->
-            <div class="blog col">
+            <div class="blog col" *ngFor="let post of posts | slice:0:4;">
                 <div class="blog-inner">
-                    <div class="media"><a href="blog-details.html" class="image"><img src="assets/images/blog/blog1.png" alt=""></a></div>
+                    <div class="media"><a routerLink="{{ '/blog-detail/' + post.id }}" class="image"><img [src]="post.image" alt="" height="300px"></a></div>
                     <div class="content">
-                        <h3 class="title"><a href="blog-details.html">Cool boy with tattoo</a></h3>
+                        <h3 class="title"><a routerLink="{{ '/blog-detail/' + post.id }}">{{ post.title }}</a></h3>
                         <ul class="meta">
-                            <li><i class="fa fa-calendar"></i><span class="date-time"><span class="date">20</span><span class="separator">-</span><span class="month">Jul</span></span></li>
+                            <li><i class="fa fa-calendar"></i><span class="date-time"><span class="date">{{ post.createdAt }}</span></span></li>
                         </ul>
                         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat </p>
-                        <a class="readmore" href="blog-details.html">Read more</a>
+                        <a class="readmore" routerLink="{{ '/blog-detail/' + post.id }}"> Read more</a>
                     </div>
                 </div>
             </div>
             <!-- Single Blog End -->
-            <!-- Single Blog Start -->
-            <div class="blog col">
-                <div class="blog-inner">
-                    <div class="media"><a href="blog-details.html" class="image"><img src="assets/images/blog/blog2.png" alt=""></a></div>
-                    <div class="content">
-                        <h3 class="title"><a href="blog-details.html">Blog image post</a></h3>
-                        <ul class="meta">
-                            <li><i class="fa fa-calendar"></i><span class="date-time"><span class="date">20</span><span class="separator">-</span><span class="month">Jul</span></span></li>
-                        </ul>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat </p>
-                        <a class="readmore" href="blog-details.html">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Blog End -->
-            <!-- Single Blog Start -->
-            <div class="blog col">
-                <div class="blog-inner">
-                    <div class="media"><a href="blog-details.html" class="image"><img src="assets/images/blog/blog3.png" alt=""></a></div>
-                    <div class="content">
-                        <h3 class="title"><a href="blog-details.html">Blog Audio post</a></h3>
-                        <ul class="meta">
-                            <li><i class="fa fa-calendar"></i><span class="date-time"><span class="date">20</span><span class="separator">-</span><span class="month">Jul</span></span></li>
-                        </ul>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat </p>
-                        <a class="readmore" href="blog-details.html">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Blog End -->
-            <!-- Single Blog Start -->
-            <div class="blog col">
-                <div class="blog-inner">
-                    <div class="media"><a href="blog-details.html" class="image"><img src="assets/images/blog/blog1.png" alt=""></a></div>
-                    <div class="content">
-                        <h3 class="title"><a href="blog-details.html">Blog Video post</a></h3>
-                        <ul class="meta">
-                            <li><i class="fa fa-calendar"></i><span class="date-time"><span class="date">20</span><span class="separator">-</span><span class="month">Jul</span></span></li>
-                        </ul>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat </p>
-                        <a class="readmore" href="blog-details.html">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Single Blog End -->
+       
+             
+          
         </div>
     </div>
 </div>

@@ -20,6 +20,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart.component';
+import { AboutComponent } from './views/pages/about/about.component';
+import { ContactComponent } from './views/pages/contact/contact.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { ShoppingCartComponent } from './views/pages/shopping-cart/shopping-cart
     BlogComponent,
     BlogDetailComponent,
     AppComponent ,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    AboutComponent,
+    ContactComponent,
+   
   ],
   imports: [
     HttpClientModule,

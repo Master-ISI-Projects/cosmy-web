@@ -41,11 +41,7 @@
                                 <div class="entry-summary blog-post-description">
                                     <p>{{ post?.content }}</p>
                                     <!--Blog Post Tag-->
-                                    <div class="single-post-tag">
-
-                                        Tags:
-
-                                    </div>
+                                 
                                 </div>
                             </div>
                         </div>
@@ -100,10 +96,10 @@
                     <div class="col-md-4 col-sm-6"  *ngFor="let post of posts | slice:0:3;" >
                         <div class="relatedthumb mb-xs-30" >
                             <div class="image">
-                                <a routerLink="{{ '/blog-detail/' + post.id }}" (click)="reflicher()"><img [src]="post.image"  ></a>
+                                <a routerLink="{{ '/blog-detail/' + post.id }}" (click)="reflicher()"><img [src]="post.image"  height="300px"  ></a>
                             </div>
-                            <h4><a >Post with Gallery</a></h4>
-                            <span class="rl-post-date">December 1, 2018</span>
+                            <h4><a >{{post.title}}</a></h4>
+                            <span class="rl-post-date">{{post.createdAt}}</span>
                         </div>
                     </div>
                 

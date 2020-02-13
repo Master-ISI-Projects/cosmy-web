@@ -39,8 +39,8 @@ for (var i = 1; i< 10; i++) {
   database.posts.push({
     id: i,
     title: faker.lorem.words(),
-    content: faker.lorem.text(),
-    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 4) + 1) + '.png',
+    content: faker.lorem.paragraph(),
+    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 9) + 1) + '.png',
     author: faker.name.firstName() + ' ' + faker.name.lastName(),
     createdAt: faker.date.past(i)
   });
