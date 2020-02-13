@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { OwlModule } from 'ngx-owl-carousel';  
 
 import {Post} from '../../../models/post';
 import {PostService} from '../../../services/post.service';
 import {OrderService} from '../../../services/order.service';
 import {Member} from '../../../models/member';
 import {MembersService} from '../../../services/members.service';
+import {OwlOptions} from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   cancledOrdersCount: number = 0;
   confirmedOrdersCount: number = 0;
 
-  customOptions: OwlModule   = {
+  customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
     mouseDrag: true,
