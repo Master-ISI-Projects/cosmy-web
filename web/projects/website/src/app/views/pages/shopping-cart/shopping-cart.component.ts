@@ -10,16 +10,18 @@ import { Product} from '../../../models/product';
 export class ShoppingCartComponent implements OnInit {
   	cartProducts: Product[];
 	showDataNotFound = true;
-	totalValue = 0;
+	totalValue :number = 0;
 
 	// Not Found Message
 	messageTitle = 'No Products Found in Cart';
-	messageDescription = 'Please, Add Products to Cart';
 
 	constructor(private productService: ProductService) {}
 
 	ngOnInit() {
 		this.getCartProduct();
+		this.cartProducts.forEach(product => {
+			this.totalValue += product.price * product.qty;
+		});
 	}
 
 	
@@ -33,6 +35,6 @@ export class ShoppingCartComponent implements OnInit {
 
 	getCartProduct() {
 		this.cartProducts = this.productService.getLocalCartProducts();
-		}
+	}
 
 }

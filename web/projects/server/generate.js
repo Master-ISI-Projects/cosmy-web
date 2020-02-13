@@ -4,7 +4,7 @@ var database = {members: [], products: [], posts: [], categories: [], comments :
 var categories = ['Category 1', 'Category 2', 'Category 3', 'Category 4'];
 var orderStatus = ['En Attent', 'Annulé', 'Confirmé'];
 
-for (var i = 1; i< 20; i++) {
+for (var i = 1; i< 10; i++) {
   database.members.push({
     id: i,
     firstName: faker.name.firstName(),
@@ -31,14 +31,16 @@ for (var i = 1; i< 20; i++) {
     inSold: faker.random.boolean(),
     pourcentagePromotion: faker.random.number(),
     favourite: faker.random.number(),
-    productSeller: faker.random.number()
+    productSeller: faker.random.number(),
+    inSolde : faker.random.boolean()
+
   });
 
   database.posts.push({
     id: i,
     title: faker.lorem.words(),
-    content: faker.lorem.text(),
-    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 4) + 1) + '.png',
+    content: faker.lorem.paragraph(),
+    image: 'assets/images/blog/blog' + (Math.floor(Math.random() * 9) + 1) + '.png',
     author: faker.name.firstName() + ' ' + faker.name.lastName(),
     createdAt: faker.date.past(i)
   });

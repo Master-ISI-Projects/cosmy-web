@@ -16,7 +16,7 @@ import { AuthComponent } from './views/layouts/auth/auth.component';
 import { LoginComponent } from './views/pages/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './views/pages/dashboard/dashboard.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { OwlModule } from 'ngx-owl-carousel';
 import {IndexMembersComponent} from './views/pages/members/index-members/index-members.component';
 import {CreateMembersComponent} from './views/pages/members/create-members/create-members.component';
 import {MembersService} from './services/members.service';
@@ -51,6 +51,8 @@ import {OrderService} from './services/order.service';
     IndexProductsComponent,
     CreateProductsComponent,
     ShowProductsComponent,
+    AppRoutingModule,
+  
     IndexPostsComponent,
     CreatePostsComponent,
     ShowPostsComponent,
@@ -62,7 +64,7 @@ import {OrderService} from './services/order.service';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
-    CarouselModule,
+    OwlModule  ,
     FormsModule
   ],
   providers: [

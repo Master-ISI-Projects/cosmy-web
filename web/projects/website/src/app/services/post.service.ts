@@ -20,4 +20,9 @@ export class PostService {
   getPostById(id: number): Observable<Post> {
     return this.http.get<Post>(this.URL + "/posts/" + id);
   }
+  add(post: Post){
+  
+    return this.http.post<Post>(this.URL + "/posts",post);
+   
+   }
 }
