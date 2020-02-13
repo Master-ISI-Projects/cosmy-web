@@ -1,1 +1,143 @@
-<p>create-products works!</p>
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h1>Nouveau produit</h1>
+        <div class="top-right-button-container mb-4">
+          <button routerLink="/products" type="button" class="btn btn-primary btn-lg top-right-button link-type">Liste des produits</button>
+        </div>
+        <nav class="breadcrumb-container d-none d-sm-block d-lg-inline-block" aria-label="breadcrumb">
+          <ol class="breadcrumb pt-0">
+            <li class="breadcrumb-item">
+              <a routerLink="/dashbaord">Tableau de board</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a routerLink="/products">Produits</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Nouveau produit</li>
+          </ol>
+        </nav>
+        <div class="separator mb-5"></div>
+      </div>
+    </div>
+    <form method="post" (ngSubmit)="saveProduct()">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="separator mb-4"></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="title">Nom de produit</label>
+                    <input type="text"
+                           [(ngModel)]="newProduct.title"
+                           class="form-control"
+                           name="title"
+                           id="title"
+                           placeholder="Nom de produit">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="category">Categorie</label>
+                    <select name="category" id="category" class="form-control" [(ngModel)]="newProduct.category">
+                      <option *ngFor="let category of categories" [value]="category.title">{{ category.title }}</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="in_solde">En solde</label>
+                    <select name="inSolde" id="in_solde" [(ngModel)]="newProduct.inSolde" class="form-control">
+                      <option value="1">Oui</option>
+                      <option value="0">Non</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="pourcentage_promotion">Pourcentage de promotion</label>
+                    <input type="text"
+                           [(ngModel)]="newProduct.pourcentagePromotion"
+                           class="form-control"
+                           name="pourcentage_Promotion"
+                           id="pourcentage_promotion"
+                           placeholder="Pourcentage de promotion">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="price">Prix en DH</label>
+                    <input type="text"
+                           [(ngModel)]="newProduct.price"
+                           class="form-control"
+                           name="price"
+                           id="price"
+                           placeholder="Prix en DH">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="weight">Poids en KG</label>
+                    <input type="text"
+                           [(ngModel)]="newProduct.weight"
+                           class="form-control"
+                           name="weight"
+                           id="weight"
+                           placeholder="Poids en KG">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="qte">Quantité</label>
+                    <input type="text"
+                           [(ngModel)]="newProduct.qte"
+                           class="form-control"
+                           name="qte"
+                           id="qte"
+                           placeholder="Quantité">
+                  </div>
+                </div>
+              </div>
+              <div class="separator mb-4"></div>
+              <div class="form-group">
+                <label for="application_protocol">Protocole d'application</label>
+                <textarea [(ngModel)]="newProduct.applicationProtocol"
+                          class="form-control"
+                          name="applicationProtocol"
+                          id="application_protocol"
+                          placeholder="Protocole d'application"
+                          cols="30" rows="5"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="video">Video</label>
+                <textarea [(ngModel)]="newProduct.video"
+                          class="form-control"
+                          name="video"
+                          id="video"
+                          placeholder="Video"
+                          cols="30" rows="5"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea [(ngModel)]="newProduct.description"
+                          class="form-control"
+                          name="description"
+                          id="description"
+                          placeholder="Description"
+                          cols="30" rows="10"></textarea>
+              </div>
+              <div class="mt-4"></div>
+              <button type="submit" class="float-right btn btn-primary mb-0">Enregistrer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</main>

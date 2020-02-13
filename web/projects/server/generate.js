@@ -62,11 +62,12 @@ for (let index = 0; index < categories.length; index++) {
 for (let i = 0; i < 20; i++) {
   const details = [];
 
-  for (let index = 0; index < 20; index++) {
+  for (let index = 0; index < 5; index++) {
     details.push({
       id: index,
       qte: (Math.floor(Math.random() * 5) + 1),
-      products: faker.commerce.productName()
+      products: faker.commerce.productName(),
+      price: faker.commerce.price()
     })
   }
 

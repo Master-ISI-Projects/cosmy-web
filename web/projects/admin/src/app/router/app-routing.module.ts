@@ -31,7 +31,10 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
-      { path: '', component: BlankComponent, pathMatch: 'full'},
+      {
+        path: '',
+        component: DashboardComponent
+      },
       {
         path: 'dashboard',
         component: DashboardComponent
@@ -83,7 +86,7 @@ const routes: Routes = [
     ]
   },
   // Otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'dashboard' }
 ];
 
 @NgModule({

@@ -19,8 +19,8 @@
           <div *ngFor="let order of orders" class="card d-flex flex-row mb-3">
             <div class="pl-2 d-flex flex-grow-1 min-width-zero">
               <div class="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
-                <a routerLink="{{ 'orders/show/' + order.id }}" class="w-15 w-sm-100">
-                  <p class="list-item-heading mb-1 truncate">{{ order.id }}</p>
+                <a routerLink="{{ '/orders/show/' + order.id }}" class="w-15 w-sm-100">
+                  <p class="list-item-heading mb-1 truncate">OR-00{{ order.id }}</p>
                 </a>
                 <p class="mb-1 text-small text-muted text-center w-20 w-sm-100">
                   {{ order.customer }}

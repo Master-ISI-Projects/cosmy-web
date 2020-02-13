@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Member} from '../models/member';
 import {Product} from '../models/product';
+import {Category} from '../models/category';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,11 @@ export class ProductService {
     return this.http.get<Product>(this.RESOURCE_URL + '/' + id);
   }
 
-  save(product: Product): Observable<Member> {
-    return this.http.post(this.RESOURCE_URL, product);
+  save(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.RESOURCE_URL, product);
+  }
+
+  getAllCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(environment.baseUrl +  '/categories');
   }
 }
